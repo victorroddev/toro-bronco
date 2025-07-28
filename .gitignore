@@ -1,0 +1,8 @@
+.venv 
+.env
+temp/
+package-lock.json
+package.json
+postcss.config.mjs
+node_modules/
+utilities.txt
