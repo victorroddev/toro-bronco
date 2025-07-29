@@ -1,0 +1,75 @@
+.text-gradient-custom{
+    background-image: linear-gradient(to bottom,  #F63E02 0%, #E6AF2E 100%);
+    -webkit-background-clip: text; /* Para compatibilidad con navegadores WebKit (Chrome, Safari) */
+    background-clip: text;
+    color: transparent;
+}
+
+/* Animación de pulsación para la llama */
+@keyframes flamePulse {
+    0% { transform: scale(0.98); opacity: 0.9; }
+    50% { transform: scale(1.02); opacity: 1; }
+    100% { transform: scale(0.98); opacity: 0.9; }
+}
+
+/* Animación de movimiento sutil (parpadeo) */
+@keyframes flameWobble {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    25% { transform: translateY(-1px) translateX(1px); }
+    50% { transform: translateY(0px) translateX(-1px); }
+    75% { transform: translateY(1px) translateX(1px); }
+}
+
+
+/* Aplicar animaciones a todas las partes del fuego */
+.flame-loader-svg .flame-part {
+    transform-origin: center bottom; /* Las llamas pulsan/se mueven desde su base */
+    transition: fill 0.4s ease-in-out; /* Transición suave para el color de relleno */
+    animation: flamePulse 1.5s ease-in-out infinite alternate,
+               flameWobble 2s linear infinite; /* Combina dos animaciones */
+}
+
+/* Ajustes individuales para un efecto más orgánico */
+#main-flame {
+    animation-delay: 0s, 0.5s; /* Retraso para wobble */
+    transform-origin: 50% 80%; /* Ajusta el origen de la transformación si la base no es el centro-fondo */
+}
+
+#inner-flame {
+    animation: flamePulse 1s ease-in-out infinite alternate,
+               flameWobble 1.8s linear infinite reverse; /* Pulsa más rápido, wobble inverso */
+    animation-delay: 0.1s, 0s;
+}
+
+#flame-spark-1 {
+    animation: flamePulse 0.8s ease-in-out infinite alternate,
+    flameWobble 1.5s linear infinite;
+    animation-delay: 0.2s, 0.3s;
+}
+
+#flame-spark-2 {
+    animation: flamePulse 1.2s ease-in-out infinite alternate,
+    flameWobble 1.7s linear infinite reverse;
+    animation-delay: 0.3s, 0.1s;
+}
+
+/* Continúa con flame-spark-3, flame-spark-4 y otras partes si quieres */
+/* También puedes ajustar la opacidad inicial de las partes de sombra */
+.flame-loader-svg #flame-shadows path {
+    animation: flamePulse 1.8s ease-in-out infinite alternate;
+    opacity: 0.2; /* Asegura una opacidad base más baja para la sombra */
+}
+
+/* Ajusta el color inicial de los path para que coincida con el #333 del JS si quieres */
+/* O simplemente deja que el JS los cambie al iniciar */
+
+
+
+
+  /** Below CSS is completely optional **/
+  
+  .gallery-item {
+    width: 200px;
+    padding: 5px;
+  }
+  

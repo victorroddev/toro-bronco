@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/output.css">
+    <link rel="stylesheet" href="/static/css/global.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lg-thumbnail.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lg-fullscreen.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lg-autoplay.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lg-share.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css">
+
+    <title>{% block title %}Toro Bronco Real{% endblock %}</title>
+</head>
+<body>
+    {% block navbar %}
+    <nav>
+        <div class="flex flex-row absolute z-10 p-3">
+            <button class="cursor-pointer transition-transform duration-300">
+                <img src="/static/images/menu-open.png" alt="boton para abrir menu" class="size-12 z-20" id="menu-open">
+                <img src="/static/images/menu-close.svg" alt="boton para abrir menu" class="size-12 z-20 hidden" id="menu-close">
+            </button>
+        </div>
+        <div id="menu" class="flex flex-col absolute mt-20 p-6 bg-black z-20 w-full h-dvh  items-center pt-12 hidden transition-opacity opacity-0 duration-300"> 
+            <ul class="text-center text-4xl font-poppins flex flex-col gap-14">
+                <li>
+                    <a href="{{url_for('menu')}}" class="text-white">Menu</a>
+                </li>
+                <li>
+                    <a href="" class="text-white">Ubicacion</a>
+                </li>
+                <li>
+                    <p class="text-white">Ordena y recoge: <span class="font-bold">656-1902-12933</span></p>
+                </li>
+            </ul>
+            <div class="flex flex-row gap-2 mt-8">
+                <a href="https://www.facebook.com/profile.php?id=61559980921329&locale=es_LA" class="bg-blueCustom p-2 rounded-full">
+                    <img src="{{ url_for('static', filename='/images/facebook.svg')}}"  alt="Icono de Facebook" class="size-11">
+                </a>
+                <a href="https://www.instagram.com/growy_tech/" class="bg-blueCustom p-2 rounded-full">
+                    <img src="{{ url_for('static', filename='/images/instagram.svg')}}"  alt="Icono de Instagram" class="size-11">
+                </a>
+                <a href="https://www.tiktok.com/@growy.tech" class="bg-blueCustom p-2 rounded-full">
+                    <img src="{{ url_for('static', filename='/images/tiktok.png')}}"  alt="Icono de Tik Tok" class="size-11">
+                </a>
+            </div>
+        </div>
+        
+        <div id="loader-overlay" class="fixed inset-0 bg-black flex items-center justify-center z-[9999] opacity-100 pointer-events-auto transition-opacity duration-300 mx-auto">
+            <svg class="flame-loader-svg" width="150" height="150" viewBox="0 0 492.289 492.289" xml:space="preserve" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <path id="main-flame" class="flame-part" style="fill:#FF3069;" d="M360.43,269.324c0,63.118-51.167,114.286-114.286,114.286s-114.286-51.167-114.286-114.286 s114.286-168.408,114.286-168.408s34.74,17.255,52.117,54.595c12.267,26.36,5.99,64.171,12.267,72.385 c5.002,6.545,16.816-35.449,21.341-28.7C348.264,223.647,360.43,248.73,360.43,269.324z"></path>
+        
+                        <polygon style="fill:#AA947D;" points="175.085,436.767 72.179,412.727 79.533,381.244 246.143,420.166 "></polygon>
+                        <polygon style="fill:#836F5A;" points="317.2,436.766 420.11,460.807 412.756,492.289 246.142,453.366 "></polygon>
+                        <polygon style="fill:#AA947D;" points="412.756,381.244 397.738,384.752 359.584,362.724 347.659,383.379 363.778,392.686 72.179,460.807 79.533,492.289 420.11,412.727 "></polygon>
+        
+                        <path id="flame-spark-1" class="flame-part" style="fill:#FF3069;" d="M378.055,127.728c0,16.685,8.319,31.418,21.028,40.306c12.708-8.888,21.028-23.621,21.028-40.306 c0-16.685-8.319-31.418-21.028-40.306C386.374,96.309,378.055,111.043,378.055,127.728z"></path>
+                        <path id="flame-spark-2" class="flame-part" style="opacity:0.28;fill:#AB3018;" d="M401.12,88.937c6.479,8.324,10.345,18.779,10.345,30.145 c0,16.685-8.319,31.418-21.028,40.306c-0.694-0.486-1.37-0.996-2.037-1.516c3.032,3.896,6.631,7.328,10.683,10.161 c12.708-8.888,21.028-23.621,21.028-40.306C420.111,111.954,412.669,97.932,401.12,88.937z"></path>
+                        <path id="flame-spark-3" class="flame-part" style="fill:#FF3069;" d="M72.179,135.445c0,16.685,8.319,31.418,21.028,40.306c12.708-8.888,21.028-23.621,21.028-40.306 c0-16.685-8.319-31.418-21.028-40.306C80.498,104.026,72.179,118.76,72.179,135.445z"></path>
+                        <path id="flame-spark-4" class="flame-part" style="fill:#FF3069;" d="M187.205,40.306c0,16.685,8.319,31.418,21.028,40.306c12.708-8.888,21.028-23.621,21.028-40.306 c0-16.685-8.319-31.418-21.028-40.306C195.524,8.888,187.205,23.621,187.205,40.306z"></path>
+        
+                        <path id="inner-flame" class="flame-part" style="fill:#FFB057;" d="M298.261,289.218c0,28.783-23.333,52.117-52.117,52.117s-52.117-23.333-52.117-52.117 s52.117-76.798,52.117-76.798s15.842,7.869,23.767,24.897c5.594,12.021,2.732,29.264,5.594,33.009 c2.281,2.985,7.669-16.166,9.732-13.088C292.713,268.388,298.261,279.827,298.261,289.218z"></path>
+        
+                        <g id="flame-shadows" style="opacity:0.36;">
+                            <path class="flame-part" style="fill:#AB3018;" d="M292.225,193.704c2.76,3.611,7.594-7.555,12.133-17.157c-1.237-7.165-3.117-14.243-6.096-20.646 c-3.981-8.555-8.877-16.042-14.054-22.523C290.66,158.019,286.858,186.68,292.225,193.704z"></path>
+                            <path class="flame-part" style="fill:#AB3018;" d="M335.436,205.026c4.214,10.634,6.69,20.826,6.69,30.105c0,63.119-51.167,114.286-114.286,114.286 c-36.784,0-69.504-17.383-90.408-44.377C152.315,350.867,195.357,384,246.145,384c63.118,0,114.286-51.167,114.286-114.286 C360.43,250.645,349.996,227.727,335.436,205.026z"></path>
+                        </g>
+                        <path class="flame-part" style="opacity:0.28;fill:#AB3018;" d="M95.244,96.654c6.479,8.324,10.345,18.779,10.345,30.145 c0,16.685-8.319,31.418-21.028,40.306c-0.694-0.486-1.37-0.996-2.037-1.516c3.032,3.896,6.631,7.328,10.683,10.161 c12.708-8.888,21.028-23.621,21.028-40.306C114.235,119.671,106.793,105.649,95.244,96.654z"></path>
+                        <path class="flame-part" style="opacity:0.28;fill:#AB3018;" d="M210.27,1.516c6.479,8.324,10.345,18.779,10.345,30.145 c0,16.685-8.319,31.418-21.028,40.306c-0.694-0.486-1.37-0.996-2.037-1.516c3.032,3.896,6.631,7.328,10.683,10.161 c12.708-8.888,21.028-23.621,21.028-40.306C229.26,24.533,221.819,10.511,210.27,1.516z"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </nav>
+    {% endblock %}
+    {%block content %}
+    <main>
+
+    </main>
+    {%endblock%}
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+    
+    <script src="https://unpkg.com/scrollreveal"></script> 
+    <script src="/static/js/menu.js"></script>
+    <script src="{{url_for('static', filename='/js/main.js')}}"></script>
+    
+</body>
+</html>
