@@ -23,16 +23,25 @@
 
     <title>{% block title %}Toro Bronco Real{% endblock %}</title>
 </head>
-<body>
+<body class="bg-black">
     {% block navbar %}
     <nav>
-        <div class="flex flex-row absolute z-10 p-3">
-            <button class="cursor-pointer transition-transform duration-300">
-                <img src="/static/images/menu-open.png" alt="boton para abrir menu" class="size-12 z-20" id="menu-open">
-                <img src="/static/images/menu-close.svg" alt="boton para abrir menu" class="size-12 z-20 hidden" id="menu-close">
-            </button>
+        <div class="flex flex-row z-10 p-3 items-center justify-between">
+            <!--Menu icon-->
+            <div id="menu" class="relative w-[30px] h-[30px] flex flex-col justify-around cursor-pointer">
+                <div id="first-line" class="w-[30px] h-[4px] bg-white transition-all"></div>
+                <div id="second-line" class="w-[30px] h-[4px] bg-white transition-all"></div>
+                <div id="third-line" class="w-[30px] h-[4px] bg-white transition-all"></div>
+            </div>
+            <!--Logo-->
+            <div>
+                <a href="{{url_for('home')}}">
+                    <img src="{{url_for('static', filename='images/logo-toro-bronco.webp')}}" alt="" class="size-28">
+                </a>
+            </div>
         </div>
-        <div id="menu" class="flex flex-col absolute mt-20 p-6 bg-black z-20 w-full h-dvh  items-center pt-12 hidden transition-opacity opacity-0 duration-300"> 
+        <!--Menu-->
+        <div id="menu-modal" class="flex flex-col absolute p-6 bg-black z-20 w-full h-dvh  items-center pt-12 hidden transition-opacity opacity-0 duration-300"> 
             <ul class="text-center text-4xl font-poppins flex flex-col gap-14">
                 <li>
                     <a href="{{url_for('menu')}}" class="text-white">Menu</a>
@@ -56,7 +65,7 @@
                 </a>
             </div>
         </div>
-        
+        <!--Loader-->
         <div id="loader-overlay" class="fixed inset-0 bg-black flex items-center justify-center z-[9999] opacity-100 pointer-events-auto transition-opacity duration-300 mx-auto">
             <svg class="flame-loader-svg" width="150" height="150" viewBox="0 0 492.289 492.289" xml:space="preserve" fill="#000000">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -90,7 +99,6 @@
     {% endblock %}
     {%block content %}
     <main>
-
     </main>
     {%endblock%}
     
@@ -102,6 +110,52 @@
     <script src="https://unpkg.com/scrollreveal"></script> 
     <script src="/static/js/menu.js"></script>
     <script src="{{url_for('static', filename='/js/main.js')}}"></script>
-    
+    <footer>
+        {% block footer %}
+        <div class="flex flex-row bg-black lg:w-[100%] mx-auto mb-3 mt-7 lg:mt-18 pt-7 pb-7 lg:pt-16 lg:pb-16 border-t-yellowCustom border-2">
+            <div class="flex flex-col lg:flex-row mx-auto gap-3 lg:justify-between lg:w-[100%] pl-4 pr-4">
+
+                <!--Logo-->
+                <div class="flex flex-col lg:w-1/3 lg:items-start mx-auto ">
+                    <a href="{{ url_for('home')}}">
+                        <div class="flex flex-row justify-center items-center">
+                            <img src=" {{url_for('static', filename='/images/logo.webp')}}"  alt="Logo de Toro Bronco Real" class="size-24 lg:size-32">
+                        </div>
+                    </a>
+                    <p class="font-poppins text-white font-light lg:text-xl">Simplemente lo mejor.</p>
+                </div> 
+                <!--Social Media Icon-->
+                <div class="flex flex-row  lg:items-center justify-center gap-2 mt-2 mx-auto lg:w-1/3" >
+                    <!--Facebook Logo-->
+                    <a href="https://www.facebook.com/profile.php?id=61559980921329&locale=es_LA" class="bg-blueCustom p-2 rounded-full">
+                        <img src="{{ url_for('static', filename='/images/facebook.svg')}}" alt="Icono de Facebook" class="size-10">
+                    </a>
+                    <!--Instagram Logo-->
+                    <a href="https://www.instagram.com/growy_tech/" class="bg-blueCustom p-2 rounded-full">
+                        <img src="{{ url_for('static', filename='/images/instagram.svg')}}" alt="Icono de Instagram" class="size-10">
+                    </a>
+                    </a>
+                    <!--TikTok Logo-->
+                    <a href="https://www.tiktok.com/@growy.tech" class="bg-blueCustom p-2 rounded-full">
+                        <img src="{{ url_for('static', filename='/images/tiktok.png')}}" alt="Icono de Tik Tok" class="size-10">
+                    </a>
+                </div>
+                
+                <!--Site Map-->
+                <div class="flex flex-col gap-2 justify-center lg:w-1/3">
+                    <p class="font-poppins text-white font-bold text-xl lg:text-2xl text-center">Sitio</p>
+                    <div class="links flex flex-row flex-wrap gap-2 items-center justify-center">
+                        <a href="{{url_for('menu')}}" class="font-poppins text-white lg:text-xl">Menu</a>
+                        <a href="{{url_for('ubicacion')}}" class="font-poppins text-white lg:text-xl">Ubicacion</a>
+                        <a href="{{url_for('home')}}" class="font-poppins text-white lg:text-xl">Home</a>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+        {% endblock %}
+    </footer>
 </body>
 </html>
