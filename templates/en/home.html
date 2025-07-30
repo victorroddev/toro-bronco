@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/global.css">
+    <title>Toro Bronco Real</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+    {%extends "base.html" %}
+</head>
+{% block content %}
+<body class="bg-black">
+    <!--Hero Section-->
+    <section>
+        <div class="bg-[url(/static/images/hero-bg.webp)] relative bg-center flex flex-col w-full h-[800px] lg:h-[1000px] justify-center">
+            <div class="absolute inset-0 bg-black opacity-70"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black from-5% via-10% to-transparent to-40%"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black from-5% via-10% to-transparent to-40%"></div>
+            <div class="z-10 flex flex-col">
+                <p class="font-poppins text-4xl lg:text-7xl font-bold text-center text-white">Simply</p>
+                <p class="font-satisfy text-gradient-custom text-7xl lg:text-9xl text-center -mt-5">The Best</p>
+                <img src="/static/images/hero-img.webp" alt="Imagen de un platillo" class="w-[95%] max-w-[350px] mx-auto -mt-4 ">
+                <a href="{{url_for('menu')}}" class="text-white font-poppins text-2xl mt-10 w-[95%] border-2 border-redCustom mx-auto p-2 lg:mb-20 max-w-[450px] cursor-pointer hover:border-yellowCustom transition-colors duration-200 text-center">Menu</a>
+                <img src="{{url_for('static', filename='/images/arrow.svg')}}" alt="" class="size-12 mx-auto animate-bounce mt-6">
+            </div>
+        </div>
+    </section>
+
+    <!--divider Section-->
+    <section>
+        <div class="flex first-image w-full  min-h-[300px] lg:min-h-[500px] xl:min-h-[700px] mt-40" id="first-image">
+            <img src="/static/images/divider-img-01.webp" alt="" class="w-[100%]">
+        </div>
+    </section>
+    
+
+    <!--About US-->
+    <section class=" flex relative">
+
+        <div class="" style="background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.33; background-size: cover; background-image: url('{{ url_for('static', filename='images/bg-01.webp')}}');"></div>
+        <div class="flex flex-col lg:max-w-[1360px] mx-auto mt-12 lg:mt-20">
+            <div class="flex flex-row mx-auto reveal-left">
+                <p class="font-satisfy font-semibold text-5xl lg:text-7xl text-center text-redCustom text-shadow-yellowCustom">Nuestra Historia</p>
+            </div>
+            <div class="flex flex-col lg:flex-col mt-3">
+                <div class="z-50 reveal-bottom flex gap-2 flex-col w-[95%] mx-auto">
+                    <p class="text-white font-poppins">Para poderpresentar a la comunidad Juarense el origen de lo que hoy es una exitosa cadena de restaurantes “El Toro Bronco”, es necesario remontarnos a quién por su visión y esfuerzo es responsable del nacimiento de este proyecto: El Sr. José Refugio Bernal Santos, mejor conocido como el maestro Volvo, originario del estado de Aguascalientes, nacido en un pueblo llamado “el Bimbaletes”.</p>
+                    <p class="text-white font-poppins">En el año de 1950 el Sr. Bernal decide mudarse a Ciudad Juárez con miras a prosperar en todos los ámbitos de su vida. Su primer negocio fue la instalación de un taller mecánico, el cual llamó “Técnica Automotríz” ubicado en el Fracc. Las Margaritas al norte de la ciudad, donde inició su singular trabajo como mecánico de vehículos, especializado en modelos europeos tales como Volvo, Jaguar, Mercedes, BMW; de aquella profesión se le quedaría el mote de “el maestro Volvo” expresión por la cual se le conoció desde ese entonces.</p>
+                    <p class="text-white font-poppins ">El Sr. José Refugio Bernal Santos fallece el 1º. De enero del año 2013, y como un homenaje consecuente al esfuerzo inicial de su padre, nace en Junior la idea de construír el Toro Bronco Real, proyecto que es respaldado y motivado por su esposa, quien desde su unión viene a ser su apoyo laboral en la organización y administración de la cadena restaurantera. El 19 de diciembre de ese mismo año (2013) compran de común acuerdo el terreno en el cual se asienta el que viene a ser el mayor de los “ Toros “ y después de dos largos y esperanzadores años de construcción en Septiembre del 2016 se ve la realidad de una gran meta alcanzada: El Toro Bronco Real.</p>
+                </div>
+                <div class="z-[500] mt-5">
+                    <img src="{{url_for('static', filename='images/our-story-img-test.png')}}" alt="" class="">
+                </div>
+                
+            </div>
+
+            
+        </div>
+        
+
+    
+        </div>
+        
+
+    </section>
+
+    <section>
+        <div class="flex w-full h-5 bg-yellowCustom overflow-hidden">
+        </div>
+        <div class="mx-auto w-[95%] overflow-hidden">
+            <h2 class="font-bold font-poppins text-redCustom text-4xl lg:text-6xl text-center reveal-left">Desayuno</h2>
+            <h2 class="font-satisfy text-redCustom text-5xl lg:text-8xl text-center reveal-right">Buffet</h2>
+            <p class="font-poppins text-redCustom text-center mt-2 lg:mt-6 reveal-bottom">Horario: 8:00 am - 12:00 pm</p>
+            <img src="" alt="">
+        </div>
+        <div class="flex w-full h-5 bg-yellowCustom  overflow-hidden">
+    </section>
+
+    <section class="max-w-[1360px] mx-auto overflow-hidden">
+        <div class="flex flex-col lg:flex-row items-center justify-baseline">
+            <form action="/contacto" method="POST" class="mx-auto p-4 flex flex-col lg:flex-1/2 reveal-left">
+                <h2 class="font-poppins font-medium text-xl lg:text-3xl text-redCustom text-center">Contacto</h2>
+                <p class="font-poppins text-white">Siempre estamos dispuestos a leerte, envianos tu comentario.</p>
+                <div class="mb-4">
+                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+            
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+            
+                <div class="mb-6">
+                    <label for="mensaje" class="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none"></textarea>
+                </div>
+            
+                <div class="flex items-center justify-between">
+                    <button type="submit"
+                            class="bg-yellowCustom hover:bg-redCustom text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Enviar Mensaje
+                    </button>
+                </div>
+            </form>
+            <!--Preguntas frecuentes-->
+            <div class="flex lg:flex-1/2 reveal-right">       
+                <div class="mx-auto py-8">
+                    <h2 class="text-xl lg:text-3xl font-medium text-center mb-8 text-redCustom font-poppins">Preguntas Frecuentes</h2>
+                
+                    <div class="space-y-4">
+                        <!--first question-->
+                        <div class="border border-yellowCustom rounded-lg overflow-hidden">
+                            <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none"
+                                    aria-expanded="false" aria-controls="faq-answer-5">
+                                <span class="text-lg font-poppins text-white">¿Cuáles son los precios del Buffet?</span>
+                                <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="faq-answer-5" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out">
+                                <p class="text-white font-poppins text-center">Adulto: $240, Infante: $140, Nino: $120</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-yellowCustom rounded-lg overflow-hidden">
+                            <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none"
+                                    aria-expanded="false" aria-controls="faq-answer-1">
+                                <span class="text-lg font-poppins text-white">¿Cuáles son los precios del Buffet?</span>
+                                <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="faq-answer-1" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out">
+                                <p class="text-white font-poppins text-center">Adulto: $240, Infante: $140, Nino: $120</p>
+                            </div>
+                        </div>
+                
+                       
+                
+                       
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <!--Formulario de Contacto-->
+        
+
+    </section>
+
+    <script src="/static/js/animations.js"></script>
+    <script type="" src="{{url_for('static', filename='js/scroll.js')}}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const accordionButtons = document.querySelectorAll('.border.border-yellowCustom button');
+
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const contentWrapper = document.getElementById(button.getAttribute('aria-controls'));
+            const content = contentWrapper.querySelector('p'); // Selecciona el párrafo dentro del contenedor
+            const svgIcon = button.querySelector('svg');
+
+            // Alternar la visibilidad y animación
+            if (contentWrapper.classList.contains('h-0')) {
+                // Abre el acordeón
+                contentWrapper.classList.remove('h-0', 'opacity-0');
+                // Establece la altura del contenedor a la altura real de su contenido
+                // Usa 'scrollHeight' para obtener la altura total del contenido, incluyendo el padding
+                contentWrapper.style.height = content.scrollHeight + 'px';
+                contentWrapper.style.opacity = '1';
+                
+                button.setAttribute('aria-expanded', 'true');
+                svgIcon.classList.add('rotate-180');
+            } else {
+                // Cierra el acordeón
+                // Primero establece la altura a su valor actual para que la transición funcione
+                contentWrapper.style.height = content.scrollHeight + 'px';
+                // Fuerza un reflow para asegurar que el navegador registre la altura actual
+                void contentWrapper.offsetWidth; 
+                
+                contentWrapper.style.height = '0'; // Anima a cero
+                contentWrapper.style.opacity = '0'; // Anima la opacidad a cero
+                
+                // Después de la transición, resetea la altura para que no afecte otros elementos
+                contentWrapper.addEventListener('transitionend', function handler() {
+                    contentWrapper.classList.add('h-0', 'opacity-0'); // Vuelve a ocultarlo con h-0 y opacity-0
+                    contentWrapper.style.height = ''; // Quita el estilo de altura en línea para dejar que CSS lo maneje
+                    contentWrapper.removeEventListener('transitionend', handler);
+                });
+
+                button.setAttribute('aria-expanded', 'false');
+                svgIcon.classList.remove('rotate-180');
+            }
+        });
+    });
+});
+    </script>
+</body>
+</html>
+</body>
+{% endblock %}
+</html>

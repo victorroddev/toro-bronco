@@ -38,4 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1000
     })
 
+    sr.reveal('.reveal-top', {
+        origin: 'top',
+        distance: '10px',
+        delay: 500,
+        duration: 1000
+    })
+
+    sr.reveal('.aparecer', {
+        origin: 'left',
+        distance: '5px',
+        delay: 500,
+        duration: 1000
+    })
+
 })
