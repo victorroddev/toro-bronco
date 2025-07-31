@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Toro Bronco Real</title>
+    {% extends 'base.html' %}
+
+</head>
+
+<body class="bg-black">
+    {% block content %}
+    <!--Hero Section-->
+    <div class="flex w-full h-[400px] relative">
+        <div class="inset-0 w-full absolute bg-[url(/static/images/menu-bg.webp)] opacity-15" ></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black from-5% via-10% to-transparent to-40%"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black from-5% via-10% to-transparent to-40%"></div>
+        <div class="flex flex-col mx-auto items-center justify-center w-[100%]">
+            <img src="{{url_for('static', filename='images/menu-img.webp')}}" alt="" class="scale-[20%] absolute mr-80 z-30">
+            <div class="flex flex-col bg-black z-20 pl-6 pr-6 border-2 border-redCustom w-[95%] max-w-[420px]">
+                <h2 class="font-poppins text-white text-5xl text-center font-bold neon-text">Nuestro</h2>
+                <h2 class="neon-text font-poppins text-7xl text-center" >Menú</h2>
+            </div>
+            
+        </div>
+    </div>  
+
+    <!--Menu Items Section-->
+    <div class="flex flex-col flex-wrap lg:flex-row w-[95%] max-w-[1200px] mx-auto gap-8">
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <a href="">
+                <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-tl-3xl">
+                <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom rounded-br-3xl pt-4 pb-4">Especialidades del maestro Volvo</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <a href="">
+                <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-t-4xl">
+                <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Camarones</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-t-full">
+            <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Filetes y Pescado</p>
+        </div>
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-t-full">
+            <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Papa Tatemada</p>
+        </div>
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-t-full">
+            <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Cortes Selelctos</p>
+        </div>
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-t-full">
+            <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Mas platillos</p>
+        </div>
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-t-full">
+            <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Comaleros</p>
+        </div>
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-t-full">
+            <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Entradas</p>
+        </div>
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-t-full">
+            <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Tacos</p>
+        </div>
+
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+            <img src="{{url_for('static', filename='/images/bimbalete.webp')}}" alt="" class="rounded-t-full">
+            <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Quesadillas</p>
+        </div>
+
+
+
+
+
+    </div>
+
+    <style>
+        /* CSS personalizado para el efecto de neón */
+        .neon-text{
+            -webkit-text-stroke: 1px red;
+        }
+        .neon-text-white {
+            -webkit-text-stroke: 1px red;
+            color: white; /* Color principal del texto */
+            text-shadow:
+                0 0 7px red,    /* Sombra blanca interior */
+                0 0 10px red,
+                0 0 21px red,
+                0 0 20px red,   /* Sombra verde/azul exterior (ajusta el color a tu gusto) */
+                0 0 42px red,
+                0 0 52px red,
+                0 0 50px red,
+                0 0 75px red;
+        }
+
+        .neon-text-orange {
+            color: #f77f00; /* Color principal del texto (naranja brillante) */
+            text-shadow:
+                0 0 7px #f77f00,    /* Sombra naranja interior */
+                0 0 10px #f77f00,
+                0 0 21px #f77f00,
+                0 0 42px #ff0000,   /* Sombra roja exterior (para un efecto de degradado de neón) */
+                0 0 82px #ff0000,
+                0 0 92px #ff0000,
+                0 0 102px #ff0000,
+                0 0 151px #ff0000;
+        }
+
+        /* Opcional: Para un efecto de glow en el fondo, aunque el enfoque es el texto */
+        
+    </style>
+        
+    {%endblock%}
+</body>
+</html>

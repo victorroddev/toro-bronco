@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialidades | Toro Bronco</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    {%extends "base.html" %}
+</head>
+<body>
+    {%block content %}
+    <h2 class="title">Conoce nuestras</h2>
+    <h2 class="title main-title mb-6">Especialidades</h2>
+
+    <!--items-->
+    <div class="container-grid">
+        <img src="{{url_for('static', filename='/images/menu/bimbalete-01.webp')}}" alt="Bimbalete" class="img img-1" description="Bimbalete Gigante">
+        <img src="{{url_for('static', filename='/images/menu/bimbalete-02.webp')}}" alt="Bimbalete 2" class="img img-2">
+        <img src="{{url_for('static', filename='/images/menu/carnitas-01.webp')}}" alt="" class="img img-3">
+        <img src="{{url_for('static', filename='/images/menu/carnitas-02.webp')}}" alt="" class="img img-4">
+        <div class="container-img">
+            <img src="" alt="" class="img-show">
+            <i class='bx  bx-x'></i>
+            <p class="copy"></p>
+        </div>
+    </div>
+
+    <style>
+        
+
+        .bx{
+            color: white;
+        }
+
+        .container-grid{
+            margin-inline: auto;
+            display: grid;
+            height: 100vh;
+            width: 95%;
+            max-width: 1200px;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-template-areas:
+            "img1 img1 img2 img2 img2"
+            "img1 img1 img2 img2 img2"
+            "img3 img3 img2 img2 img2"
+            "img4 img4 img4 img4 img4"
+            "img4 img4 img4 img4 img4";
+            gap: 5px;
+        }
+
+        .img:hover{
+            filter: grayscale(50%);
+            cursor: pointer;
+            transition: filter .5s;
+        }
+        
+        .img-1{
+            grid-area: img1;
+        }
+
+        .img-2{
+            grid-area: img2;
+        }
+
+        .img-3{
+            grid-area: img3;
+        }
+
+        .img-4{
+            grid-area: img4;
+        }
+
+        .img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title{
+            -webkit-text-stroke: 1px #F63E02;
+            font-family: 'Poppins';
+            color: transparent;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .main-title{
+            color:white;
+            font-size: 2.5rem;
+        }
+
+        .container-img{
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform .4s ease-in;
+        }
+
+        .move{
+            transform: translateX(0);
+        }
+
+        .img-show{
+            height: 80%;
+            transform: scale(0);
+            display: block;
+            object-fit: cover;
+            transition: transform .8s .4s;
+
+        }
+
+        .show{
+            transform: scale(1);
+        }
+
+        .copy{
+            position: fixed;
+            bottom: 40px;
+            color: white;
+        }
+
+        .bx.bx-x{
+            position: absolute;
+            color: white;
+            top: 20px;
+            right: 10px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        /* Para el contenedor principal de la lightbox */
+.container-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none; /* Deshabilita interacciones cuando está oculto */
+    transition: opacity 0.3s ease;
+}
+
+.container-img.move {
+    opacity: 1;
+    pointer-events: auto; /* Habilita interacciones cuando está visible */
+}
+
+/* Para la imagen mostrada */
+.img-show {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transform: scale(0.7); /* Para un efecto de entrada */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.img-show.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Estilos para el texto */
+.copy {
+    position: absolute;
+    bottom: 5%;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilos para el botón de cerrar (bx) */
+.bx {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Estilos para los botones de navegación */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3em;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    user-select: none; /* Evita que el texto se seleccione al hacer clic rápido */
+    z-index: 1001;
+    display: none; /* Inicialmente ocultos */
+}
+
+.nav-button.prev {
+    left: 20px;
+}
+
+.nav-button.next {
+    right: 20px;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Media query para móviles (ajusta según necesites) */
+@media (max-width: 768px) {
+    .nav-button {
+        font-size: 2em;
+        padding: 5px;
+    }
+    .prev {
+        left: 10px;
+    }
+    .next {
+        right: 10px;
+    }
+}
+
+        
+    </style>
+
+<script>
+    addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.img');
+        const containerImage = document.querySelector('.container-img');
+        const imageContainer = document.querySelector('.img-show');
+        const copy = document.querySelector('.copy');
+        const closeModal = document.querySelector('.bx');
+
+        // Declarar currentIndex aquí para que esté disponible en todo el ámbito de DOMContentLoaded
+        let currentIndex = 0;
+
+        // Navigation elements
+        const prevButton = document.createElement('div');
+        prevButton.classList.add('nav-button', 'prev');
+        prevButton.innerHTML = '&#10094;'; // Left arrow
+        containerImage.appendChild(prevButton);
+
+        const nextButton = document.createElement('div');
+        nextButton.classList.add('nav-button', 'next');
+        nextButton.innerHTML = '&#10095;'; // Right arrow
+        containerImage.appendChild(nextButton);
+
+        // Único bucle para asignar event listeners a las imágenes
+        images.forEach((image, index) => {
+            image.addEventListener('click', () => {
+                currentIndex = index; // Establece el índice de la imagen clicada
+                addImage(image.getAttribute('src'), image.getAttribute('description'));
+            });
+        });
+
+        const addImage = (srcImage, description) => {
+            // Usa 'add' para asegurar que las clases se aplican al abrir el modal
+            containerImage.classList.add('move');
+            imageContainer.classList.add('show');
+            imageContainer.src = srcImage;
+            copy.innerHTML = description;
+            prevButton.style.display = 'block';
+            nextButton.style.display = 'block';
+        };
+
+        closeModal.addEventListener('click', () => {
+            // Usa 'remove' para asegurar que las clases se quitan al cerrar el modal
+            imageContainer.classList.remove('show');
+            containerImage.classList.remove('move');
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+        });
+
+        const changeImage = (direction) => {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1; // Vuelve a la última imagen si se va más allá del inicio
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0; // Vuelve a la primera imagen si se va más allá del final
+            }
+            const newImage = images[currentIndex];
+            addImage(newImage.getAttribute('src'), newImage.getAttribute('alt'));
+        };
+
+        // Navigation buttons listeners
+        prevButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita que el clic en el botón cierre el modal
+            changeImage(-1);
+        });
+
+        nextButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita que el clic en el botón cierre el modal
+            changeImage(1);
+        });
+
+        // Event listener para cerrar el modal al hacer clic en el contenedor (fuera de la imagen)
+        containerImage.addEventListener('click', (e) => {
+            // Cierra el modal solo si el clic fue directamente en el containerImage (el fondo)
+            if (e.target === containerImage) {
+                containerImage.classList.remove('move');
+                imageContainer.classList.remove('show');
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            }
+        });
+
+        // --- Funcionalidad de Swipe para Móviles ---
+        let startX; // Coordenada X inicial del toque
+
+        imageContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        imageContainer.addEventListener('touchend', (e) => {
+            if (startX === undefined || startX === null) return; // Mejor comprobación de si startX fue inicializado
+
+            const endX = e.changedTouches[0].clientX;
+            const diffX = startX - endX; // Diferencia para determinar la dirección del swipe
+
+            if (Math.abs(diffX) > 50) { // Umbral para considerar un swipe válido (ej. 50px)
+                if (diffX > 0) {
+                    // Swipe a la izquierda (desplazar a la siguiente imagen)
+                    changeImage(1);
+                } else {
+                    // Swipe a la derecha (desplazar a la imagen anterior)
+                    changeImage(-1);
+                }
+            }
+            startX = null; // Reinicia startX
+        });
+    });
+</script>
+
+    {%endblock%}
+</body>
+</html>

@@ -19,7 +19,8 @@ def home():
 
 @app.route("/menu")
 def menu():
-    return render_template('menu.html')
+    lang = get_user_language()
+    return render_template(f'{lang}/menu.html')
 
 @app.route("/ubicacion")
 def ubicacion():
@@ -28,6 +29,12 @@ def ubicacion():
 @app.route('/presite')
 def presite():
     return render_template('presite.html')
+
+
+@app.route('/especialidades')
+def especialidades():
+    lang = get_user_language()
+    return render_template(f'{lang}/menu/especialidades.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=5500)
