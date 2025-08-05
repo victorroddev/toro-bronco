@@ -14,12 +14,10 @@
 
     <!--items-->
     <div class="container-grid">
-        <img src="{{url_for('static', filename='/images/menu/bimbalete-01.webp')}}" alt="Bimbalete" class="img img-1" description="Bimbalete Gigante">
-        <img src="{{url_for('static', filename='/images/menu/bimbalete-02.webp')}}" alt="Bimbalete 2" class="img img-2">
-        <img src="{{url_for('static', filename='/images/menu/carnitas-01.webp')}}" alt="" class="img img-3">
-        <img src="{{url_for('static', filename='/images/menu/carnitas-02.webp')}}" alt="" class="img img-4">
-        <img src="{{url_for('static', filename='/images/menu/test1.jpg')}}" alt="" class="img img-5">
-
+        <img src="{{url_for('static', filename='/images/menu/bimbalete-01.webp')}}" alt="Bimbalete" class="img img-1" description="Bimbalete">
+        <img src="{{url_for('static', filename='/images/menu/bimbalete-02.webp')}}" alt="Bimbalete 2" class="img img-2" description="Bimbalete">
+        <img src="{{url_for('static', filename='/images/menu/carnitas-01.webp')}}" alt="" class="img img-3" description="Carnitas">
+        <img src="{{url_for('static', filename='/images/menu/carnitas-02.webp')}}" alt="" class="img img-4" description="Carnitas">
         <div class="container-img">
             <img src="" alt="" class="img-show">
             <i class='bx  bx-x'></i>
@@ -41,7 +39,7 @@
             width: 95%;
             max-width: 1200px;
             grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(5,1fr);
+            grid-template-rows: repeat(4,1fr);
             grid-template-areas:
             "img1 img3"
             "img1 img3"
@@ -85,17 +83,17 @@
         }
 
         .title{
-            -webkit-text-stroke: 1px #F63E02;
+            -webkit-text-stroke: 1px #E6AF2E;
             font-family: 'Poppins';
             color: transparent;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
             text-align: center;
         }
 
         .main-title{
             color:white;
-            font-size: 2.5rem;
+            font-size: 3.5rem;
         }
 
         .container-img{
@@ -233,6 +231,10 @@
 
 /* Media query para móviles (ajusta según necesites) */
 @media (max-width: 768px) {
+    .main-title{
+        font-size: 2.5rem;
+    }
+    
     .nav-button {
         font-size: 2em;
         padding: 5px;
@@ -256,7 +258,7 @@
         const copy = document.querySelector('.copy');
         const closeModal = document.querySelector('.bx');
 
-        // Declarar currentIndex aquí para que esté disponible en todo el ámbito de DOMContentLoaded
+        
         let currentIndex = 0;
 
         // Navigation elements
@@ -270,16 +272,16 @@
         nextButton.innerHTML = '&#10095;'; // Right arrow
         containerImage.appendChild(nextButton);
 
-        // Único bucle para asignar event listeners a las imágenes
+        
         images.forEach((image, index) => {
             image.addEventListener('click', () => {
-                currentIndex = index; // Establece el índice de la imagen clicada
+                currentIndex = index; 
                 addImage(image.getAttribute('src'), image.getAttribute('description'));
             });
         });
 
         const addImage = (srcImage, description) => {
-            // Usa 'add' para asegurar que las clases se aplican al abrir el modal
+            // 
             containerImage.classList.add('move');
             imageContainer.classList.add('show');
             imageContainer.src = srcImage;
@@ -289,7 +291,6 @@
         };
 
         closeModal.addEventListener('click', () => {
-            // Usa 'remove' para asegurar que las clases se quitan al cerrar el modal
             imageContainer.classList.remove('show');
             containerImage.classList.remove('move');
             prevButton.style.display = 'none';
@@ -299,28 +300,28 @@
         const changeImage = (direction) => {
             currentIndex += direction;
             if (currentIndex < 0) {
-                currentIndex = images.length - 1; // Vuelve a la última imagen si se va más allá del inicio
+                currentIndex = images.length - 1; 
             } else if (currentIndex >= images.length) {
-                currentIndex = 0; // Vuelve a la primera imagen si se va más allá del final
+                currentIndex = 0; 
             }
             const newImage = images[currentIndex];
-            addImage(newImage.getAttribute('src'), newImage.getAttribute('alt'));
+            addImage(newImage.getAttribute('src'), newImage.getAttribute('description'));
         };
 
         // Navigation buttons listeners
         prevButton.addEventListener('click', (e) => {
-            e.stopPropagation(); // Evita que el clic en el botón cierre el modal
+            e.stopPropagation(); 
             changeImage(-1);
         });
 
         nextButton.addEventListener('click', (e) => {
-            e.stopPropagation(); // Evita que el clic en el botón cierre el modal
+            e.stopPropagation(); 
             changeImage(1);
         });
 
-        // Event listener para cerrar el modal al hacer clic en el contenedor (fuera de la imagen)
+        // Event listener to close modal 
         containerImage.addEventListener('click', (e) => {
-            // Cierra el modal solo si el clic fue directamente en el containerImage (el fondo)
+            
             if (e.target === containerImage) {
                 containerImage.classList.remove('move');
                 imageContainer.classList.remove('show');

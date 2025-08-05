@@ -1,6 +1,6 @@
 .text-gradient-custom{
     background-image: linear-gradient(to bottom,  #F63E02 0%, #E6AF2E 100%);
-    -webkit-background-clip: text; /* Para compatibilidad con navegadores WebKit (Chrome, Safari) */
+    -webkit-background-clip: text; /* To compatibility with WebKit (Chrome, Safari) */
     background-clip: text;
     color: transparent;
 }
