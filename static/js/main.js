@@ -78,5 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ... (Tu código de ScrollReveal.js y otras lógicas aquí) ...
 });

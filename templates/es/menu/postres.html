@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidades | Toro Bronco</title>
+    <title>Postres | Toro Bronco</title>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     {%extends "base.html" %}
 </head>
 <body>
     {%block content %}
-    <h2 class="title">Conoce nuestras</h2>
-    <h2 class="title main-title mb-6">Especialidades</h2>
+    <h2 class="title">Conoce nuestros</h2>
+    <h2 class="title main-title mb-6">Postres</h2>
 
     <!--items-->
     <div class="container-grid">
-        <img src="{{url_for('static', filename='/images/menu/bimbalete-01.webp')}}" alt="Bimbalete" class="img img-1" description="Bimbalete">
-        <img src="{{url_for('static', filename='/images/menu/bimbalete-02.webp')}}" alt="Bimbalete 2" class="img img-2" description="Bimbalete">
-        <img src="{{url_for('static', filename='/images/menu/carnitas-01.webp')}}" alt="" class="img img-3" description="Carnitas">
-        <img src="{{url_for('static', filename='/images/menu/carnitas-02.webp')}}" alt="" class="img img-4" description="Carnitas">
-        <img src="{{url_for('static', filename='/images/menu/carnitas-3.webp')}}" alt="Bimbalete 2" class="img img-5" description="Carnitas">
+    <img src="{{url_for('static', filename='/images/menu/carlota-limon.webp')}}" alt="Bimbalete" class="img img-1" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/cheescake-frambuesa-2.webp')}}" alt="Bimbalete" class="img img-2" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/cheesecake-frambuesa.webp')}}" alt="Bimbalete" class="img img-3" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/cheesecake-oreo-2.webp')}}" alt="Bimbalete" class="img img-4" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/cheesecake-oreo.webp')}}" alt="Bimbalete" class="img img-5" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/duraznos-flameados.webp')}}" alt="Bimbalete" class="img img-6" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/flan-2.webp')}}" alt="Bimbalete" class="img img-7" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/flan.webp')}}" alt="Bimbalete" class="img img-8" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/fresas-tequila.webp')}}" alt="Bimbalete" class="img img-9" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/mango-tequila.webp')}}" alt="Bimbalete" class="img img-10" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/pastel-3-leches.webp')}}" alt="Bimbalete" class="img img-11" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/pastel-chocolate.webp')}}" alt="Bimbalete" class="img img-12" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/tiramisu.webp')}}" alt="Bimbalete" class="img img-13" description="Bimbalete">
         <div class="container-img">
             <img src="" alt="" class="img-show">
             <i class='bx  bx-x'></i>
@@ -28,7 +36,7 @@
 
 
     <div class="flex flex-col cursor-pointer">       
-        <div class="mx-auto py-8 w-[95%] max-w-[1200px]">
+                <div class="mx-auto py-8 w-[95%] max-w-[1200px]">
                     <div class="space-y-4 ">
                         <!--first question-->
                         <div class="border border-yellowCustom rounded-lg overflow-hidden ">
@@ -39,16 +47,14 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div id="faq-answer-5" class="flex flex-col h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%] gap-4 mx-auto">
+                            <div id="faq-answer-5" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%] p-4">
                                 <p class="text-white font-poppins text-center">Bimbalete Bronco Gigante <span>(res o puerco 500gr)</span></p>
-                                <div class="w-[100%] h-[2px] bg-yellowCustom"></div>
                                 <p class="text-white font-poppins text-center">Bimbalete de Camaron</p>
-                                <div class="w-[100%] h-[2px] bg-yellowCustom"></div>
-                                <p class="text-white font-poppins text-center mb-3">Carnitas (1 kilo, 3/4, 1/2, 1/4)</p>
+                                <p class="text-white font-poppins text-center">Carnitas (1 kilo, 3/4, 1/2, 1/4)</p>
                             </div>
                         </div>
                     </div>
-        </div>
+                </div>
 
     <style>
         
@@ -59,21 +65,18 @@
 
         .container-grid{
             margin-inline: auto;
-            display: grid;
-            height: 100vh;
             width: 95%;
+            height: auto;
             max-width: 1200px;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(4,1fr);
-            grid-template-areas:
-            "img1 img3"
-            "img1 img3"
-            "img2 img3"
-            "img2 img5"
-            "img4 img5"
-            "img4 img5";
-            gap: 5px;
-        }
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(16, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            gap: 0.1rem;
+            }
+
+        
 
         .img:hover{
             filter: grayscale(50%);
@@ -81,25 +84,19 @@
             transition: filter .5s;
         }
         
-        .img-1{
-            grid-area: img1;
-        }
-
-        .img-2{
-            grid-area: img2;
-        }
-
-        .img-3{
-            grid-area: img3;
-        }
-
-        .img-4{
-            grid-area: img4;
-        }
-        
-        .img-5{
-            grid-area: img5;
-        }
+        .img-1 { grid-area: 1 / 1 / 2 / 2; }
+        .img-2 { grid-area: 1 / 1 / 4 / 2; }
+        .img-3 { grid-area: 4 / 1 / 5 / 2; }
+        .img-4 { grid-area: 4 / 1 / 7 / 2; }
+        .img-5 { grid-area: 7 / 1 / 11 / 2; }
+        .img-6 { grid-area: 11 / 1 / 12 / 2; }
+        .img-7 { grid-area: 12 / 1 / 13 / 2; }
+        .img-8 { grid-area: 13 / 1 / 15 / 2; }
+        .img-9 { grid-area: 15 / 1 / 17 / 2; }
+        .img-10 { grid-area: 1 / 2 / 6 / 3; }
+        .img-11 { grid-area: 6 / 2 / 7 / 3; }
+        .img-12 { grid-area: 7 / 2 / 9 / 3; }
+        .img-13 { grid-area: 9 / 2 / 17 / 3; }
 
         .img{
             width: 100%;
@@ -167,110 +164,110 @@
             cursor: pointer;
         }
 
-.container-img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    pointer-events: none; /* Deshabilita interacciones cuando está oculto */
-    transition: opacity 0.3s ease;
-}
-
-.container-img.move {
-    opacity: 1;
-    pointer-events: auto; /* Habilita interacciones cuando está visible */
-}
-
-/* Para la imagen mostrada */
-.img-show {
-    max-width: 90vw;
-    max-height: 90vh;
-    object-fit: contain;
-    display: block;
-    transform: scale(0.7); /* Para un efecto de entrada */
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    object-fit: contain;
-}
-
-.img-show.show {
-    transform: scale(1);
-    opacity: 1;
-}
-
-/* Estilos para el texto */
-.copy {
-    position: absolute;
-    bottom: 5%;
-    color: white;
-    font-size: 1.2em;
-    text-align: center;
-    width: 100%;
-}
-
-/* Estilos para el botón de cerrar (bx) */
-.bx {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-/* Estilos para los botones de navegación */
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 3em;
-    cursor: pointer;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    user-select: none; /* Evita que el texto se seleccione al hacer clic rápido */
-    z-index: 1001;
-    display: none; /* Inicialmente ocultos */
-}
-
-.nav-button.prev {
-    left: 20px;
-}
-
-.nav-button.next {
-    right: 20px;
-}
-
-.nav-button:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-/* Media query para móviles (ajusta según necesites) */
-@media (max-width: 768px) {
-    .main-title{
-        font-size: 2.5rem;
+    .container-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none; /* Deshabilita interacciones cuando está oculto */
+        transition: opacity 0.3s ease;
     }
-    
-    .nav-button {
+
+    .container-img.move {
+        opacity: 1;
+        pointer-events: auto; /* Habilita interacciones cuando está visible */
+    }
+
+    /* Para la imagen mostrada */
+    .img-show {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        display: block;
+        transform: scale(0.7); /* Para un efecto de entrada */
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        object-fit: contain;
+    }
+
+    .img-show.show {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    /* Estilos para el texto */
+    .copy {
+        position: absolute;
+        bottom: 5%;
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Estilos para el botón de cerrar (bx) */
+    .bx {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
         font-size: 2em;
-        padding: 5px;
+        cursor: pointer;
+        z-index: 1001;
     }
-    .prev {
-        left: 10px;
+
+    /* Estilos para los botones de navegación */
+    .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 3em;
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        user-select: none; /* Evita que el texto se seleccione al hacer clic rápido */
+        z-index: 1001;
+        display: none; /* Inicialmente ocultos */
     }
-    .next {
-        right: 10px;
+
+    .nav-button.prev {
+        left: 20px;
     }
-}
+
+    .nav-button.next {
+        right: 20px;
+    }
+
+    .nav-button:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Media query para móviles (ajusta según necesites) */
+    @media (max-width: 768px) {
+        .main-title{
+            font-size: 2.5rem;
+        }
+        
+        .nav-button {
+            font-size: 2em;
+            padding: 5px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    }
 
         
     </style>

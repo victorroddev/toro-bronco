@@ -36,5 +36,10 @@ def especialidades():
     lang = get_user_language()
     return render_template(f'{lang}/menu/especialidades.html')
 
+@app.route('/postres')
+def postres():
+    lang = get_user_language()
+    return render_template(f'{lang}/menu/postres.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=5500)

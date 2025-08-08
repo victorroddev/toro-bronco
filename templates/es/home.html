@@ -21,16 +21,29 @@
             <div class="absolute inset-0 bg-gradient-to-b from-black from-5% via-10% to-transparent to-40%"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black from-5% via-10% to-transparent to-40%"></div>
             <div class="z-10 flex flex-col">
-                <p class="font-poppins text-4xl lg:text-7xl font-bold text-center text-white">Simplemente</p>
-                <p class="font-satisfy text-gradient-custom text-7xl lg:text-9xl text-center -mt-5">Lo mejor</p>
-                <img src="/static/images/hero-img.webp" alt="Imagen de un platillo" class="w-[95%] max-w-[350px] mx-auto -mt-4 ">
+                <p class="text-[2.5rem] lg:text-6xl" style="font-family: Hanson-Bold; color: white; text-align: center;">Simplemente</p>
+                <p class="text-7xl  lg:text-9xl -mt-6 neon-text-orange text-center" style="font-family: Roustel;">Lo mejor</p>
+                <img src="/static/images/hero-img.webp" alt="Imagen de un platillo" class="w-[95%] max-w-[650px] mx-auto -mt-10 ">
                 <a href="{{url_for('menu')}}" class="text-white font-poppins text-2xl mt-10 w-[95%] border-2 border-redCustom mx-auto p-2 lg:mb-20 max-w-[450px] cursor-pointer hover:border-yellowCustom hover:font-bold hover:scale-105 transition-all duration-200 text-center">Menu</a>
                 <img src="{{url_for('static', filename='/images/arrow.svg')}}" alt="" class="size-12 mx-auto animate-bounce mt-6">
             </div>
         </div>
     </section>
 
-    <!--Divider-->
+    <!--First Divider-->
+    <section>
+    <div class="relative w-full h-[800px] lg:h-[1200px] p-4 first-image" >
+
+        <img src="{{url_for('static', filename='/images/tacos.webp')}}" alt="img" class="absolute inset-0 w-full h-full object-cover lg:object-bottom reveal-top">
+        <div class="absolute inset-0 flex flex-col overflow-hidden">
+            <h2 class="font-Roustel text-white font-bold text-5xl reveal-left  ml-3" >El Papa de</h2>
+            <h2 class="reveal-right font-Roustel text-white font-bold text-5xl reveal-left ml-3"  >los tacos</h2>
+        </div>
+    </div>
+    </section>
+
+
+    <!--Second-Divider-->
     <section>
         <div class="flex first-image w-full  min-h-[300px] lg:min-h-[500px] xl:min-h-[700px] mt-40" id="first-image">
             <img src="/static/images/divider-img-01.webp" alt="" class="w-[100%]">
@@ -40,7 +53,7 @@
 
     <!--Our Story-->
     <section class="mt-16 mb-16">
-        <p  class="font-poppins font-bold text-5xl lg:text-7xl text-center text-black text-shadow-yellowCustom neon-text reveal-top">Nuestra <span class="">Historia</span></p>
+        <p  class=" font-poppins font-bold text-5xl lg:text-7xl text-center neon-text reveal-top">Nuestra <span class="">Historia</span></p>
         <div class="flex flex-col lg:flex-row  items-start mx-auto max-w-[1200px]">
             <div class="flex flex-row w-[95%] lg:w-1/3">    
                 <div class="">
@@ -102,9 +115,11 @@
         <div class="flex flex-col mx-auto w-full overflow-hidden relative">
             <div class="" style="background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.20; background-size: cover; background-image: url('{{ url_for('static', filename='images/bg-01.webp')}}');"></div>
             <h2 class="font-bold font-poppins text-black text-4xl lg:text-8xl text-center reveal-left neon-text mt-14">Desayuno</h2>
-            <h2 class="font-satisfy text-black text-5xl lg:text-9xl text-center reveal-right neon-text-white">Buffet</h2>
+            <h2 class="text-black text-5xl lg:text-9xl text-center reveal-right neon-text-white" style="font-family: Roustel;">Buffet</h2>
             <p class="font-poppins text-white text-center mt-2 lg:mt-6 reveal-bottom text-lg">Horario: 8:00 am - 12:00 pm</p>
-            <img src="{{url_for('static', filename='/images/buffet-img.webp')}}" alt="" class="mx-auto w-[1000px] reveal-bottom" >
+            <img src="{{url_for('static', filename='/images/buffet.webp')}}" alt="" class="mx-auto w-[1000px] reveal-bottom" >
+            
+            <!--Styles-->
             <style>
                 /* CSS personalizado para el efecto de neón */
                 .neon-text{
@@ -125,7 +140,7 @@
                 }
         
                 .neon-text-orange {
-                    color: #f77f00; /* Color principal del texto (naranja brillante) */
+                    color: white; /* Color principal del texto (naranja brillante) */
                     text-shadow:
                         0 0 7px #f77f00,    /* Sombra naranja interior */
                         0 0 10px #f77f00,
@@ -136,19 +151,29 @@
                         0 0 102px #ff0000,
                         0 0 151px #ff0000;
                 }
-        
-                /* Opcional: Para un efecto de glow en el fondo, aunque el enfoque es el texto */
-                
+                        
             </style>
         </div>
         <div class="flex w-full h-2 bg-yellowCustom  overflow-hidden">
     </section>
 
+    <!--Eventos-->
+    <section>
+        <div class="flex flex-col w-[100%] max-w-[1200px] mx-auto overflow-hidden p-9 gap-3 ">
+            <h2 class="font-baskervville text-white text-3xl lg:text-5xl text-center uppercase reveal-right">SALóN PRIVADO</h2>
+            <h2 class="font-baskervville text-white text-4xl text-center reveal-left">PARA TUS</h2>
+            <h2 class="font-Roustel neon-text-white text-center text-5xl lg:text-9xl reveal-right">Eventos</h2>
+            <p class="font-poppins text-lg text-center text-white reveal-bottom">Reserva Ahora</p>
+            <img src="{{url_for('static', filename='/images/salon.webp')}}" alt="" class="reveal-right">
+        </div>
+    </section>
+
+
     <section class="max-w-[1360px] mx-auto overflow-hidden">
         <div class="flex flex-col lg:flex-row items-center justify-baseline">
             <form action="/contacto" method="POST" class="mx-auto p-4 flex flex-col lg:flex-1/2 reveal-left">
-                <h2 class="font-poppins font-medium text-xl lg:text-3xl text-redCustom text-center">Contacto</h2>
-                <p class="font-poppins text-white">Siempre estamos dispuestos a leerte, envianos tu comentario.</p>
+                <h2 class="font-bold font-poppins text-black text-4xl lg:text-6xl text-center reveal-left neon-text mt-14">Contacto</h2>
+                <p class="font-poppins text-white text-center reveal-left">Siempre estamos dispuestos a leerte, envianos tu comentario.</p>
                 <div class="mb-4">
                     <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required
@@ -177,7 +202,7 @@
             <!--Preguntas frecuentes-->
             <div class="flex lg:flex-1/2 reveal-right">       
                 <div class="mx-auto py-8">
-                    <h2 class="text-xl lg:text-3xl font-medium text-center mb-8 text-redCustom font-poppins">Preguntas Frecuentes</h2>
+                    <h2 class="font-bold font-poppins text-black text-4xl lg:text-6xl text-center reveal-left neon-text mt-14 mb-4">Preguntas Frecuentes</h2>
                 
                     <div class="space-y-4">
                         <!--first question-->
@@ -193,7 +218,7 @@
                                 <p class="text-white font-poppins text-center">Adulto: $240, Infante: $140, Nino: $120</p>
                             </div>
                         </div>
-
+                        <!--Second Question-->
                         <div class="border border-yellowCustom rounded-lg overflow-hidden">
                             <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none"
                                     aria-expanded="false" aria-controls="faq-answer-1">
@@ -206,24 +231,17 @@
                                 <p class="text-white font-poppins text-center">Adulto: $240, Infante: $140, Nino: $120</p>
                             </div>
                         </div>
-                
-                       
-                
-                       
                     </div>
                 </div>
     
             </div>
         </div>
-        <!--Formulario de Contacto-->
-        
-
-    </section>
+            </section>
 
     <script src="/static/js/animations.js"></script>
     <script type="" src="{{url_for('static', filename='js/scroll.js')}}"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     const accordionButtons = document.querySelectorAll('.border.border-yellowCustom button');
 
     accordionButtons.forEach(button => {
