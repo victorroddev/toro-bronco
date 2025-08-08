@@ -38,6 +38,9 @@
         <div class="absolute inset-0 flex flex-col overflow-hidden">
             <h2 class="font-Roustel text-white font-bold text-5xl reveal-left  ml-3" >El Papa de</h2>
             <h2 class="reveal-right font-Roustel text-white font-bold text-5xl reveal-left ml-3"  >los tacos</h2>
+            <div class="bg-black w-fit rounded-2xl border-redCustom bottom-15 ml-4 lg:ml-48 text-3xl absolute reveal-left">
+                <p class="font-baskervville text-white py-2 px-2">Tacos de bisteck</p>
+            </div>
         </div>
     </div>
     </section>
@@ -45,14 +48,17 @@
 
     <!--Second-Divider-->
     <section>
-        <div class="flex first-image w-full  min-h-[300px] lg:min-h-[500px] xl:min-h-[700px] mt-40" id="first-image">
+        <div class="relative flex first-image w-full  min-h-[300px] lg:min-h-[500px] xl:min-h-[700px] mt-40 overflow-hidden" >
             <img src="/static/images/divider-img-01.webp" alt="" class="w-[100%]">
+             <div class="bg-black w-fit rounded-2xl border-redCustom bottom-15 ml-32 lg:ml-48 text-3xl absolute reveal-right">
+                <p class="font-baskervville text-white py-2 px-2">Pulpo a las brasas</p>
+            </div>
         </div>
     </section>
 
 
     <!--Our Story-->
-    <section class="mt-16 mb-16">
+    <section class="mt-16 mb-16 overflow-hidden">
         <p  class=" font-poppins font-bold text-5xl lg:text-7xl text-center neon-text reveal-top">Nuestra <span class="">Historia</span></p>
         <div class="flex flex-col lg:flex-row  items-start mx-auto max-w-[1200px]">
             <div class="flex flex-row w-[95%] lg:w-1/3">    
@@ -63,10 +69,18 @@
                         </div>
                         <div class="w-full h-[4px] bg-yellowCustom reveal-top"></div>
                     </div>
-                    <div class="w-[95%] flex flex-col mx-auto p-3 gap-1">
-                        <img src="{{url_for('static', filename='images/story-1.webp')}}" alt="Imagen de platillo" class="reveal-top rounded-tl-2xl">
-                        <p class="text-white font-poppins reveal-top">Para poderpresentar a la comunidad Juarense el origen de lo que hoy es una exitosa cadena de restaurantes “El Toro Bronco”, es necesario remontarnos a quién por su visión y esfuerzo es responsable del nacimiento de este proyecto: El Sr. José Refugio Bernal Santos, mejor conocido como el maestro Volvo, originario del estado de Aguascalientes, nacido en un pueblo llamado “el Bimbaletes”.</p>
+                    <div class="w-[95%] flex flex-col mx-auto p-3 gap-1 relative">
+                        <div class="">
+                            <img src="{{url_for('static', filename='images/story-1.webp')}}" alt="Imagen de platillo" class="reveal-top rounded-tl-2xl">
+                            <div class="bg-black absolute -mt-16 ml-3 rounded-2xl reveal-left">
+                                <h1 class="font-baskervville text-white py-2 px-2 text-lg">Comalero Bronco</h1>
+                            </div>
+                        </div>
+                        <p class="text-white font-poppins reveal-top ">Para poder presentar a la comunidad Juarense el origen de lo que hoy es una exitosa cadena de restaurantes “El Toro Bronco”, es necesario remontarnos a quién por su visión y esfuerzo es responsable del nacimiento de este proyecto: El Sr. José Refugio Bernal Santos, mejor conocido como el maestro Volvo, originario del estado de Aguascalientes, nacido en un pueblo llamado “el Bimbaletes”.</p>
                         <img src="{{url_for('static', filename='images/story-4.webp')}}" alt="Imagen de platillo" class="reveal-top rounded-tl-2xl">
+                        <div class="bg-black absolute bottom-10 right-5 l-3 rounded-2xl reveal-right">
+                                <h1 class="font-baskervville text-white py-2 px-2 text-lg">Hambuguesa</h1>
+                            </div>
 
                     </div>
                     
@@ -81,9 +95,15 @@
                         </div>
                         <div class="w-full h-[4px] bg-yellowCustom reveal-top"></div>
                     </div>
-                    <div class="w-[95%] flex flex-col mx-auto p-3">
+                    <div class="w-[95%] flex flex-col mx-auto p-3 relative">
                         <p class="text-white font-poppins reveal-top">En el año de 1950 el Sr. Bernal decide mudarse a Ciudad Juárez con miras a prosperar en todos los ámbitos de su vida. Su primer negocio fue la instalación de un taller mecánico, el cual llamó “Técnica Automotríz” ubicado en el Fracc. Las Margaritas al norte de la ciudad, donde inició su singular trabajo como mecánico de vehículos, especializado en modelos europeos tales como Volvo, Jaguar, Mercedes, BMW; de aquella profesión se le quedaría el mote de “el maestro Volvo” expresión por la cual se le conoció desde ese entonces.</p>
-                        <img src="{{url_for('static', filename='images/story-2.webp')}}" alt="Imagen de platillo" class="reveal-top rounded-bl-3xl">
+                        <div>
+                            <img src="{{url_for('static', filename='images/story-2.webp')}}" alt="Imagen de platillo" class="reveal-top rounded-bl-3xl">
+                            <div class="bg-black absolute -mt-16 ml-3 rounded-2xl reveal-left">
+                                <h1 class="font-baskervville text-white py-2 px-2 text-lg">Nachos Broncos</h1>
+                            </div>
+                        </div>
+                        
                     </div>
                     
                 </div>
@@ -97,10 +117,19 @@
                         </div>
                         <div class="w-full h-[4px] bg-yellowCustom reveal-top"></div>
                     </div>
-                    <div class="w-[95%] flex flex-col mx-auto p-3">
+                    <div class="w-[95%] flex flex-col mx-auto p-3 relative">
                         <img src="{{url_for('static', filename='images/story-3.webp')}}" alt="Imagen de platillo" class="reveal-top rounded-tr-3xl">
+                        <div class="bg-black absolute top-4 right-3 rounded-2xl reveal-right overflow-hidden">
+                                <h1 class="font-baskervville text-white py-2 px-2 text-lg">Nombre de platillo</h1>
+                            </div>
                         <p class="text-white font-poppins reveal-top">El Sr. José Refugio Bernal Santos fallece el 1º. De enero del año 2013, y como un homenaje consecuente al esfuerzo inicial de su padre, nace en Junior la idea de construír el Toro Bronco Real, proyecto que es respaldado y motivado por su esposa, quien desde su unión viene a ser su apoyo laboral en la organización y administración de la cadena restaurantera. El 19 de diciembre de ese mismo año (2013) compran de común acuerdo el terreno en el cual se asienta el que viene a ser el mayor de los “ Toros “ y después de dos largos y esperanzadores años de construcción en Septiembre del 2016 se ve la realidad de una gran meta alcanzada: El Toro Bronco Real.</p>
-                        <img src="{{url_for('static', filename='images/story-5.webp')}}" alt="Imagen de platillo" class="reveal-top rounded-br-2xl">
+                        <div>
+                            <img src="{{url_for('static', filename='images/story-5.webp')}}" alt="Imagen de platillo" class="reveal-top rounded-br-2xl">
+                            <div class="bg-black absolute -mt-16 ml-3 rounded-2xl">
+                                <h1 class="font-baskervville text-white py-2 px-2 text-lg"></h1>
+                            </div>
+                        </div>
+                        
                     </div>
                     
                 </div>
