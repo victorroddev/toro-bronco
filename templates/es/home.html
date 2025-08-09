@@ -18,8 +18,8 @@
     <section>
         <div class="bg-[url(/static/images/hero-bg.webp)] relative bg-center flex flex-col w-full h-[800px] lg:h-[1000px] justify-center">
             <div class="absolute inset-0 bg-black opacity-70"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-black from-5% via-10% to-transparent to-40%"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black from-5% via-10% to-transparent to-40%"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black from-5% via-10% to-transparent to-40% z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black from-5% via-10% to-transparent to-40% z-10"></div>
             <div class="z-10 flex flex-col">
                 <p class="text-[2.5rem] lg:text-6xl" style="font-family: Hanson-Bold; color: white; text-align: center;">Simplemente</p>
                 <p class="text-7xl  lg:text-9xl -mt-6 neon-text-orange text-center" style="font-family: Roustel;">Lo mejor</p>
@@ -32,12 +32,12 @@
 
     <!--First Divider-->
     <section>
-    <div class="relative w-full h-[800px] lg:h-[1200px] p-4 first-image" >
+    <div class="relative w-full h-[800px] lg:h-[1200px] p-4 first-image  overflow-hidden" >
 
         <img src="{{url_for('static', filename='/images/tacos.webp')}}" alt="img" class="absolute inset-0 w-full h-full object-cover lg:object-bottom reveal-top">
-        <div class="absolute inset-0 flex flex-col overflow-hidden">
-            <h2 class="font-Roustel text-white font-bold text-5xl reveal-left  ml-3" >El Papa de</h2>
-            <h2 class="reveal-right font-Roustel text-white font-bold text-5xl reveal-left ml-3"  >los tacos</h2>
+        <div class="absolute inset-0 flex flex-col ml-2 top-2 lg:left-24 lg:top-56">
+            <h2 class="font-Roustel text-white font-bold text-5xl lg:text-7xl reveal-left  ml-3" >El Papá de</h2>
+            <h2 class="reveal-right font-Roustel text-white font-bold text-5xl lg:text-7xl reveal-left ml-3"  >los taqueros</h2>
             <div class="bg-black w-fit rounded-2xl border-redCustom bottom-15 ml-4 lg:ml-48 text-3xl absolute reveal-left">
                 <p class="font-baskervville text-white py-2 px-2">Tacos de bisteck</p>
             </div>
@@ -50,8 +50,11 @@
     <section>
         <div class="relative flex first-image w-full  min-h-[300px] lg:min-h-[500px] xl:min-h-[700px] mt-40 overflow-hidden" >
             <img src="/static/images/divider-img-01.webp" alt="" class="w-[100%]">
-             <div class="bg-black w-fit rounded-2xl border-redCustom bottom-15 ml-32 lg:ml-48 text-3xl absolute reveal-right">
-                <p class="font-baskervville text-white py-2 px-2">Pulpo a las brasas</p>
+            <div class="bg-black w-fit rounded-2xl border-redCustom bottom-10 left-32 lg:left-52 text-3xl absolute reveal-right">
+                <p class="font-baskervville text-white py-2 px-2 text-center">Pulpo al <span class="font-Design">Josper</span></p>
+            </div>
+            <div class="absolute top-4 left-3 reveal-left">
+                <img src="{{url_for('static', filename='images/logo-josper-white.png')}}" alt="Logo Josper" class="lg:size-40 size-20">
             </div>
         </div>
     </section>

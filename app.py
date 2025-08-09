@@ -41,5 +41,11 @@ def postres():
     lang = get_user_language()
     return render_template(f'{lang}/menu/postres.html')
 
+@app.route('/mixologia')
+def mixologia():
+    lang = get_user_language()
+    return render_template(f'{lang}/menu/mixologia.html')
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=5500)

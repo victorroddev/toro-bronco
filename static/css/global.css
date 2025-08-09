@@ -22,6 +22,15 @@
 
 }
 
+@font-face {
+    font-family: "Design System";
+    src: url("https://db.onlinewebfonts.com/t/8f3caf92047d515ae7230350d0e5f104.eot");
+    src: url("https://db.onlinewebfonts.com/t/8f3caf92047d515ae7230350d0e5f104.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/8f3caf92047d515ae7230350d0e5f104.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/8f3caf92047d515ae7230350d0e5f104.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/8f3caf92047d515ae7230350d0e5f104.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/8f3caf92047d515ae7230350d0e5f104.svg#Design System C W01 900R")format("svg");
+}
 
 /* Animación de pulsación para la llama */
 @keyframes flamePulse {
