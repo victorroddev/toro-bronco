@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,19 +39,31 @@
             </div>
         </div>
         <!--Menu-->
-        <div id="menu-modal" class="flex flex-col absolute p-6 bg-black z-50 w-full h-dvh  items-center pt-12 hidden transition-opacity opacity-0 duration-300"> 
-            <ul class="text-center text-4xl font-poppins flex flex-col gap-14">
-                <li>
-                    <a href="{{url_for('menu')}}" class="text-white">Menu</a>
+        <div id="menu-modal" class="flex flex-col absolute p-6 lg:items-center bg-black z-50 w-full h-dvh pt-12 hidden transition-opacity opacity-0 duration-300"> 
+            <ul class="lg:text-center text-2xl lg:text-4xl font-poppins flex flex-col gap-14">
+                <li class="flex flex-row items-center gap-3.5">
+                    <!-- Menu Icon -->
+                    <div class="size-12 ">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 6.00008V4.2844C16 3.51587 16 3.13161 15.8387 2.88321C15.6976 2.66587 15.4776 2.5118 15.2252 2.45345C14.9366 2.38677 14.5755 2.51809 13.8532 2.78073L6.57982 5.4256C6.01064 5.63257 5.72605 5.73606 5.51615 5.91845C5.33073 6.07956 5.18772 6.28374 5.09968 6.51304C5 6.77264 5 7.07546 5 7.6811V12.0001M9 17.0001H15M9 13.5001H15M9 10.0001H15M8.2 21.0001H15.8C16.9201 21.0001 17.4802 21.0001 17.908 20.7821C18.2843 20.5903 18.5903 20.2844 18.782 19.9081C19 19.4802 19 18.9202 19 17.8001V9.20008C19 8.07997 19 7.51992 18.782 7.0921C18.5903 6.71577 18.2843 6.40981 17.908 6.21807C17.4802 6.00008 16.9201 6.00008 15.8 6.00008H8.2C7.0799 6.00008 6.51984 6.00008 6.09202 6.21807C5.71569 6.40981 5.40973 6.71577 5.21799 7.0921C5 7.51992 5 8.07997 5 9.20008V17.8001C5 18.9202 5 19.4802 5.21799 19.9081C5.40973 20.2844 5.71569 20.5903 6.09202 20.7821C6.51984 21.0001 7.07989 21.0001 8.2 21.0001Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </div>
+                    <a href="{{url_for('menu')}}" class="text-white">Menú</a>
                 </li>
-                <li>
-                    <a href="" class="text-white">Ubicacion</a>
+                <li class="flex flex-row items-center gap-3.5">
+                    <!-- Ubication Icon-->
+                    <div class="size-12">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.7 15C4.03377 15.6353 3 16.5205 3 17.4997C3 19.4329 7.02944 21 12 21C16.9706 21 21 19.4329 21 17.4997C21 16.5205 19.9662 15.6353 18.3 15M12 9H12.01M18 9C18 13.0637 13.5 15 12 18C10.5 15 6 13.0637 6 9C6 5.68629 8.68629 3 12 3C15.3137 3 18 5.68629 18 9ZM13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8C12.5523 8 13 8.44772 13 9Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </div>
+                    <a href="" class="text-white">Ubicación</a>
                 </li>
-                <li>
-                    <p class="text-white">Ordena y recoge: <span class="font-bold">656-1902-12933</span></p>
+                <li class="flex flex-row items-center gap-3.5">
+                    <div class="size-12 min-w-[3rem]">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </div>
+                    <p class="text-white">Ordena y recoge: <br> <span class="font-bold">656-1902-12933</span></p>
                 </li>
             </ul>
-            <div class="flex flex-row gap-2 mt-8">
+            <p class="text-white text-2xl mt-8">Nuestras Redes Sociales:</p>
+            <div class="flex flex-row gap-2">
                 <a href="https://www.facebook.com/profile.php?id=61559980921329&locale=es_LA" class="bg-blueCustom p-2 rounded-full">
                     <img src="{{ url_for('static', filename='/images/facebook.svg')}}"  alt="Icono de Facebook" class="size-11">
                 </a>
@@ -63,6 +75,8 @@
                 </a>
             </div>
         </div>
+
+        
         <!--Loader-->
         <div id="loader-overlay" class="fixed inset-0 bg-black flex items-center justify-center z-[9999] opacity-100 pointer-events-auto transition-opacity duration-300 mx-auto flex flex-col">
             <svg class="flame-loader-svg" width="150" height="150" viewBox="0 0 492.289 492.289" xml:space="preserve" fill="#000000">
