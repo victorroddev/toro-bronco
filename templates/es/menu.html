@@ -13,31 +13,45 @@
 <body class="bg-black">
     {% block content %}
     <!--Hero Section-->
-    <div class="flex flex-col w-full h-[800px] relative overflow-hidden">
+    <div class="flex flex-col w-full h-[1000px] lg:h-[1500px] relative overflow-hidden">
         <div class="inset-0 w-full absolute bg-[url(/static/images/menu-bg.webp)] opacity-15" ></div>
         <div class="absolute inset-0 bg-gradient-to-b from-black from-5% via-10% to-transparent to-40%"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-black from-5% via-10% to-transparent to-40%"></div>
-        <div class="flex flex-col mx-auto items-center justify-center w-[95%] max-w-[700px] mt-32">
-            <div class="flex flex-col  w-[95%] max-w-[520px] card">
+        <div class="flex flex-col mx-auto items-center justify-center w-[95%] max-w-[700px] mt-56">
+            <div class="flex flex-col  w-[95%] max-w-[520px] card ">
                 <h2 class="font-poppins text-white text-3xl lg:text-4xl text-center font-bold mt-10 reveal-top" style="color: black; -webkit-text-stroke: 1px #F63E02;">Nuestro</h2>
                 <h2 class="font-poppins text-white font-bold text-6xl lg:text-8xl text-center mb-10" >Menú</h2>
             </div>
+            <img src="{{url_for('static', filename='/images/arrow.svg')}}" alt="" class="size-12 mx-auto animate-bounce mt-16">
         </div>
-        <div class="flex flex-col mx-auto max-w-[1200px] z-10 text-center mt-28 mb-28">
-            <p class="text-white  font-baskervville text-2xl lg:text-4xl mb-2">Descubre nuestro menú de</p>
-            <a href="" >
-                <p class="flex w-[100%]  border-2 border-yellowCustom font-Roustel text-white text-center text-5xl lg:text-7xl justify-center items-center">Mixología</p>
-            </a>
-            <div class="size-14  border-yellowCustom border-2 p-2 rounded-full animate-bounce reveal-left drink-icon">
+        
+        <div class="flex flex-col mx-auto max-w-[1200px] z-10 text-center mt-40 lg:mt-64">
+            <!--Drink Icon-->
+            <div class="size-14   p-2 drink-icon">
                 <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 30.9998H25M18 30.9998V17.9998L29 6.99981H7L16 15.9998M12.2051 4.01351C11.1701 2.21251 9.2261 0.999512 7.0001 0.999512C3.6861 0.999512 1.0001 3.68651 1.0001 6.99951C1.0001 10.3135 3.6861 12.9995 7.0001 12.9995C8.6561 12.9995 10.1561 12.3275 11.2421 11.2425M29 0.999812L23 6.99981" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
             </div>
+            <p class="text-white  font-baskervville text-2xl lg:text-4xl mb-2">Descubre nuestro menú de</p>
+            <a href="{{url_for('mixologia')}}" >
+                <p class="flex w-[100%]  border-2 border-yellowCustom font-Roustel text-white text-center text-5xl lg:text-7xl justify-center items-center">Mixología</p>
+                
+            </a>
             
+            <!--Arrow Icon-->
+            <a href="{{url_for('mixologia')}}">
+                <div class="flex flex-row arrow border-redCustom border-2  items-center justify-center mt-20">
+                <p class=" text-white font-poppins text-lg">Ver Mixologia</p>
+                <div class="size-14  ">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.0001 13.5V9M15.0001 9H10.5001M15.0001 9L9.00024 14.9999M7.20024 20H16.8002C17.9203 20 18.4804 20 18.9082 19.782C19.2845 19.5903 19.5905 19.2843 19.7823 18.908C20.0002 18.4802 20.0002 17.9201 20.0002 16.8V7.2C20.0002 6.0799 20.0002 5.51984 19.7823 5.09202C19.5905 4.71569 19.2845 4.40973 18.9082 4.21799C18.4804 4 17.9203 4 16.8002 4H7.20024C6.08014 4 5.52009 4 5.09226 4.21799C4.71594 4.40973 4.40998 4.71569 4.21823 5.09202C4.00024 5.51984 4.00024 6.07989 4.00024 7.2V16.8C4.00024 17.9201 4.00024 18.4802 4.21823 18.908C4.40998 19.2843 4.71594 19.5903 5.09226 19.782C5.52009 20 6.08014 20 7.20024 20Z" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </div>
+            </div>
+            </a>
         </div>
     </div>  
 
     <!--Menu Items Section-->
-    <div class="flex flex-col flex-wrap lg:flex-row w-[95%] max-w-[1200px] mx-auto gap-8">
-
+    <section>
+        <h2 class="font-poppins font-bold text-5xl lg:text-7xl text-center neon-text reveal-top-mod">Categorias</h2>
+        <div class="flex flex-col flex-wrap lg:flex-row w-[95%] max-w-[1200px] mx-auto gap-8 mt-24 overflow-hidden">
         <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer reveal-left">
             <a href="{{url_for('especialidades')}}">
                 <img src="{{url_for('static', filename='/images/menu/bimbalete-02.webp')}}" alt="" class="rounded-[10rem]">
@@ -45,142 +59,46 @@
             </a>
         </div>
 
-        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer">
+        <div class="flex flex-col lg:w-1/3 w-[95%] mx-auto cursor-pointer reveal-right">
             <a href="{{url_for('postres')}}">
                 <img src="{{url_for('static', filename='/images/menu/duraznos-flameados.webp')}}" alt="" class="rounded-[10rem]">
                 <p class="text-white font-poppins w-full text-2xl text-center border-2 border-redCustom pt-4 pb-4">Postres</p>
             </a>
         </div>
     </div>
+    </section>
+    
+
+
     <!--Gsap Script-->
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.to(".drink-icon", {
-            ScrollTrigger: {
+            scrollTrigger: {
                 trigger: ".drink-icon",
-                toggleActions: "restart none none none"
+                start: "20px 80%",
+                end: "+=1000px",
+                scrub: true,
+                markers: true,
+                toggleActions: "restart pause reverse pause"
             },
-            x: 100,
-            rotation: 360,
-            duration: 3
+            x: 150,
+            duration: 1
+        });
+
+        gsap.to(".arrow", {
+            scrollTrigger: {
+                trigger: ".arrow",
+                start: "20px 80%",
+                end: "+=200px",
+                scrub: true,
+            },
+            y: -50,
+            duration: 1
         });
     </script>
 
-
-    <style>
-
-        @property --rotate {
-        syntax: "<angle>";
-        initial-value: 132deg;
-        inherits: false;
-        }
-
-        :root {
-        --card-height: 65vh;
-        --card-width: calc(var(--card-height) / 0.5);
-        }
-
-        .card {
-        background: #000;
-        width: 95%;
-        padding: 1px;
-        position: relative;
-        border-radius: 2px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        color: red;
-        cursor: pointer;
-        }
-
-        .card:hover {
-        color: red;
-        transition: color 1s;
-        }
-
-       
-        .card::before {
-        content: "";
-        width: 104%;
-        height: 102%;
-        border-radius: 8px;
-        background-image: linear-gradient(
-            var(--rotate)
-            , orange, red 43%, orange);
-            position: absolute;
-            z-index: -1;
-            top: -1%;
-            left: -2%;
-            animation: spin 2.5s linear infinite;
-        }
-
-        .card::after {
-        position: absolute;
-        content: "";
-        top: calc(var(--card-height) / 6);
-        left: 0;
-        right: 0;
-        z-index: -1;
-        height: 50%;
-        width: 80%;
-        margin: 0 auto;
-        transform: scale(0.8);
-        filter: blur(calc(var(--card-height) / 1));
-        background-image: linear-gradient(
-            var(--rotate)
-            , red, red 43%, white);
-            opacity: 1;
-        transition: opacity .5s;
-        animation: spin 2.5s linear infinite;
-        }
-
-        @keyframes spin {
-        0% {
-            --rotate: 0deg;
-        }
-        100% {
-            --rotate: 360deg;
-        }
-        }
-
-        
-
-        /* CSS personalizado para el efecto de neón */
-        .neon-text{
-            -webkit-text-stroke: 1px red;
-        }
-        .neon-text-white {
-            -webkit-text-stroke: 1px red;
-            color: white; /* Color principal del texto */
-            text-shadow:
-                0 0 7px red,    /* Sombra blanca interior */
-                0 0 10px red,
-                0 0 21px red,
-                0 0 20px red,   /* Sombra verde/azul exterior (ajusta el color a tu gusto) */
-                0 0 42px red,
-                0 0 52px red,
-                0 0 50px red,
-                0 0 75px red;
-        }
-
-        .neon-text-orange {
-            color: #f77f00; /* Color principal del texto (naranja brillante) */
-            text-shadow:
-                0 0 7px #f77f00,    /* Sombra naranja interior */
-                0 0 10px #f77f00,
-                0 0 21px #f77f00,
-                0 0 42px #ff0000,   /* Sombra roja exterior (para un efecto de degradado de neón) */
-                0 0 82px #ff0000,
-                0 0 92px #ff0000,
-                0 0 102px #ff0000,
-                0 0 151px #ff0000;
-        }
-
-        /* Opcional: Para un efecto de glow en el fondo, aunque el enfoque es el texto */
-        
-    </style>
         <script type="" src="{{url_for('static', filename='js/scroll.js')}}"></script>
     {%endblock%}
 </body>

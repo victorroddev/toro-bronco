@@ -90,5 +90,113 @@
 /* Ajusta el color inicial de los path para que coincida con el #333 del JS si quieres */
 /* O simplemente deja que el JS los cambie al iniciar */
 
+                .neon-text{
+                    -webkit-text-stroke: 1px red;
+                }
 
+                .neon-text{
+                    -webkit-text-stroke: 1px white;
+                    color: transparent;
+                }
+                .neon-text-white {
+                    -webkit-text-stroke: 1px red;
+                    color: white; /* Color principal del texto */
+                    text-shadow:
+                        0 0 7px red,    /* Sombra blanca interior */
+                        0 0 10px red,
+                        0 0 21px red,
+                        0 0 20px red,   /* Sombra verde/azul exterior (ajusta el color a tu gusto) */
+                        0 0 42px red,
+                        0 0 52px red,
+                        0 0 50px red,
+                        0 0 75px red;
+                }
+        
+                .neon-text-orange {
+                    color: white; /* Color principal del texto (naranja brillante) */
+                    text-shadow:
+                        0 0 7px #f77f00,    /* Sombra naranja interior */
+                        0 0 10px #f77f00,
+                        0 0 21px #f77f00,
+                        0 0 42px #ff0000,   /* Sombra roja exterior (para un efecto de degradado de neón) */
+                        0 0 82px #ff0000,
+                        0 0 92px #ff0000,
+                        0 0 102px #ff0000,
+                        0 0 151px #ff0000;
 
+}
+
+@property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+        }
+
+        :root {
+        --card-height: 65vh;
+        --card-width: calc(var(--card-height) / 0.5);
+        }
+
+        .card {
+        background: #000;
+        width: 95%;
+        padding: 1px;
+        position: relative;
+        border-radius: 2px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        color: red;
+        cursor: pointer;
+        }
+
+        .card:hover {
+        color: red;
+        transition: color 1s;
+        }
+
+       
+        .card::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+            var(--rotate)
+            , orange, red 43%, orange);
+            position: absolute;
+            z-index: -1;
+            top: -1%;
+            left: -2%;
+            animation: spin 2.5s linear infinite;
+        }
+
+        .card::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--card-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 50%;
+        width: 80%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--card-height) / 1));
+        background-image: linear-gradient(
+            var(--rotate)
+            , red, red 43%, white);
+            opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+        }
+
+        @keyframes spin {
+        0% {
+            --rotate: 0deg;
+        }
+        100% {
+            --rotate: 360deg;
+        }
+        }

@@ -45,6 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1000
     })
 
+    sr.reveal('.reveal-top-mod', {
+        origin: 'top',
+        distance: '200px',
+        delay: 500,
+        duration: 1000
+    })
+
     sr.reveal('.aparecer', {
         origin: 'left',
         distance: '5px',

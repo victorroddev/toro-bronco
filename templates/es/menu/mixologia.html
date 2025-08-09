@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <title>Mixologia | Toro Bronco Real</title>
+    {%extends 'base.html'%}
+</head>
+<body>
+    {%block content%}
+    <section class="flex flex-col mx-auto">
+        <a href="{{url_for('mixologia')}}" class="flex mt-60 mb-96">
+                <p class="flex mx-auto w-[100%]  lg:max-w-[420px]  border-2 border-yellowCustom font-Roustel text-white text-center text-5xl lg:text-7xl justify-center items-center">Mixología</p>
+            </a>
+
+        <!--Images-->
+        <div class="flex flex-col gap-4 items-center lg:flex-row max-w-[1300px] w-[95%] mx-auto overflow-hidden mb-72">
+            <div class="flex flex-row items-center w-[100%] reveal-right ;g:ml-20">
+                <div class="min-w-[300px] max-w-[380px] lg:max-w-[420px] gap-3 ">
+                    <img src="{{url_for('static', filename='/images/mixologia/mix-01.webp')}}" alt="" class="">
+                </div>
+                <div class="flex ml-16 text-1">
+                    <p class="neon-text font-bold transform -rotate-90 origin-bottom-left text-[4.5rem] ml-5 ">Ejemplo</p>
+                </div>
+            </div>
+
+            <div class="flex flex-row items-end w-[100%] reveal-left mx-auto relative">
+                <div class="min-w-[300px] max-w-[100%] lg:max-w-[420px]">
+                    <img src="{{url_for('static', filename='/images/mixologia/mix-02.webp')}}" alt="" class="">
+                </div>
+                <div class="flex ml-36 text-2 6 absolute">
+                    <p class="neon-text font-bold  text-[4.5rem]">Ejemplo</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to(".text-1", {
+            scrollTrigger: {
+                trigger: ".text-1",
+                start: "20px 80%",
+                end: "+=500px",
+                scrub: true,
+                toggleActions: "restart, pause, reverse pause"
+            },
+            y: 175,
+            duration: 1
+        });
+
+        gsap.to(".text-2", {
+            scrollTrigger: {
+                trigger: ".text-2",
+                start: "20px 80%",
+                end: "+=500px",
+                scrub: true,
+                toggleActions: "restart, pause, reverse pause"
+            },
+            x: -250,
+            duration: 1
+        });
+
+    </script>
+
+        <script type="" src="{{url_for('static', filename='js/scroll.js')}}"></script>
+    {%endblock%}
+</body>
+</html>
