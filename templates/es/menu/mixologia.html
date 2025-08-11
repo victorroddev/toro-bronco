@@ -11,12 +11,19 @@
 <body>
     {%block content%}
     <section class="flex flex-col mx-auto">
-        <a href="{{url_for('mixologia')}}" class="flex mt-60 mb-96">
-                <p class="flex mx-auto w-[100%]  lg:max-w-[420px]  border-2 border-yellowCustom font-Roustel text-white text-center text-5xl lg:text-7xl justify-center items-center">Mixología</p>
+        <a href="{{url_for('mixologia')}}" class="flex mt-60 mb-8 header-text" id="">
+                <p class="flex mx-auto w-[100%]  lg:max-w-[520px]   border-2 border-yellowCustom font-Roustel text-white text-center text-8xl lg:text-9xl justify-center items-center">Mixología</p>
             </a>
+        <img src="{{url_for('static', filename='/images/arrow.svg')}}" alt="" class="size-12 mx-auto animate-bounce mt-6 mb-96">
+
+        <div class=" mx-auto prev-text">
+            <h3 class="uppercase text-8xl font-bold font-poppins text-white">LISTOS</h3>
+            <h4 class="uppercase font-bold font-poppins text-white text-6xl">PARA QUE</h4>
+            <h4 class="uppercase font-bold font-poppins text-6xl text-white">DISFRUTES</h4>
+        </div>
 
         <!--Images-->
-        <div class="flex flex-col gap-4 items-center lg:flex-row max-w-[1300px] w-[95%] mx-auto overflow-hidden mb-72">
+        <div class="flex flex-col gap-4 items-center lg:flex-row max-w-[1300px] w-[95%] mx-auto overflow-hidden mb-16">
             <div class="flex flex-row items-center w-[100%] reveal-right ;g:ml-20">
                 <div class="min-w-[300px] max-w-[380px] lg:max-w-[420px] gap-3 ">
                     <img src="{{url_for('static', filename='/images/mixologia/mix-01.webp')}}" alt="" class="">
@@ -37,8 +44,384 @@
             
         </div>
     </section>
+
+    <!--Main Section-->
+    <section>
+        <div class="flex flex-col lg:flex-row flex-wrap w-[95%] mx-auto max-w-[1200px] gap-2 items-start justify-center over">
+            <!--Fist Section 'Gin & Tonic' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%]  cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-1">
+                    <span class="text-lg font-poppins text-white font-bold">Gin & Tonic</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-1" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Tanquery</li>
+                            <li>Bombay Sapphire</li>
+                            <li>Beefeater</li>
+                            <li>Hendrick’s</li>
+                            <li class="mt-4">Gin & Tonic Cítricos </li>
+                            <li>Gin & Tonic Frutos Rojos</li>
+                            <li>Gin & Tonic Pepino</li>
+                        </ul>
+                    </div>
+            </div>
+            <!--Second Section 'Tequilas' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-2">
+                    <span class="text-lg font-poppins text-white font-bold">Tequilas</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-2" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>1800 Añejo</li>
+                            <li>1800 Reposado</li>
+                            <li>1800 Cristalino</li>
+                            <li>Casa Dragones</li>
+                            <li>Corralejo Reposado</li>
+                            <li>Don Julio Blanco</li>
+                            <li>Don Julio Reposado</li>
+                            <li>DDon Julio Resposado Claro</li>
+                            <li>Don Julio 70</li>
+                            <li>Don Julio 1942</li>
+                            <li>Don Julio Real</li>
+                            <li>Jimador</li>
+                            <li>Herradura Blanco</li>
+                            <li>Herradura Reposado</li>
+                            <li>Herradura Añejo</li>
+                            <li>Herradura Ultra</li>
+                            <li>Herradura Suprema</li>
+                            <li>Hornitos Plata</li>
+                            <li>Hornitos Reposado</li>
+                            <li>José Cuervo Tradicional Reposado </li>
+                            <li>Jose Cuervo Tradicional Plata</li>
+                            <li>Jose Cuervo Especial</li>
+                            <li>Cazadores</li>
+                            <li>Penjamo Real</li>
+                            <li>Patrón</li>
+                            <li>Reserva de la Familia Plata</li>
+                            <li>Reserva de la Familia Añejo</li>
+                            <li>San Matias</li>
+                            <li>Clase Azul Reposado</li>
+                            <li>Clase Azul Cristalino</li>
+                            <li>Maestro Dobel Diamante</li>
+                            <li>Maestro Reposado</li>
+                            <li>Maestro Blanco Pavito</li>
+                            <li>Tres Generaciones Añejo</li>
+                            <li>Tres Generaciones Plata</li>
+                            <li>Tres Generaciones Reposado</li>
+                        </ul>
+                    </div>
+            </div>
+            <!--Third Section 'Mezcal' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-3">
+                    <span class="text-lg font-poppins text-white font-bold">Mezcal</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-3" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Mezcal 400 conejos</li>
+                            <li>Mezcal Amarás</li>
+                            <li>Montelobos</li>
+                            <li>Sotol Reposado de Coyame</li>
+                        </ul>
+                    </div>
+            </div>
+            <!--Fourth Section 'Brandy & Cognac' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-4">
+                    <span class="text-lg font-poppins text-white font-bold">Brandy & cognac</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-4" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Brandy Presidente</li>
+                            <li>Courvoiser Cognac</li>
+                            <li>Hennesy Cognac</li>
+                            <li>Hennesy XO</li>
+                            <li>Martell</li>
+                            <li>Remy M XO</li>
+                            <li>Martell XO</li>
+                            <li>Remy Marty</li>
+                        </ul>
+                    </div>
+            </div>
+            <!--Five Section 'Whisky' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-5">
+                    <span class="text-lg font-poppins text-white font-bold">Whisky</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-5" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Buchanan's 12</li>
+                                <li>Buchanan's 18</li>
+                                <li>Buchanan's Red Seal</li>
+                                <li>Buchanan's Two Souls</li>
+                                <li>Chivas Regal 12</li>
+                                <li>Chivas Regal 18</li>
+                                <li>Chivas Regal 21</li>
+                                <li>Chivas Ultis</li>
+                                <li>Dalmore 12</li>
+                                <li>Glenfiddich 12</li>
+                                <li>Glenfiddich 15</li>
+                                <li>Glenfiddich 18</li>
+                                <li>Glenlivet 1824</li>
+                                <li>Highlandchief</li>
+                                <li>Old Parr 12</li>
+                                <li>Old Parr 18</li>
+                                <li>Jack Daniel's</li>
+                                <li>Johnnie Walker Red Label</li>
+                                <li>Johnnie Walker Black Label</li>
+                                <li>Johnnie Walker Gold Label</li>
+                                <li>Johnnie Walker Blue Label</li>
+                                <li>Johnnie Walker Double Black</li>
+                                <li>Johnnie Walker Green Label</li>
+                                <li>The Macallan 12</li>
+                                <li>The Macallan 15</li>
+                                <li>The Macallan 18</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <!--Sixth Section 'Vodka' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-6">
+                    <span class="text-lg font-poppins text-white font-bold">Vodka</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-6" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Absolut Mandarina</li>
+                            <li>Absolut Vodka</li>
+                            <li>Grey Goose</li>
+                            <li>Oso Negro</li>
+                            <li>Smirnoff</li>
+                            <li>Tito's</li>
+                            <li>Vaccari</li>
+                            <li>Vaccari Negro</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <!--Seven Section 'Vino/Espumosos' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-7">
+                    <span class="text-lg font-poppins text-white font-bold">Vino / Espumosos</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-7" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Asti</li>
+                            <li>Blanc de Zinfandel Rosado</li>
+                            <li>Blanc de Zinfandel Verde</li>
+                            <li>Blanc de Zinfandel 187 ml</li>
+                            <li>Don Luis 375 ml</li>
+                            <li>Lambrusco</li>
+                            <li>Maria Tinto</li>
+                            <li>Maria Tinto 375 ml</li>
+                            <li>Moet 600 ml</li>
+                            <li>Monteviña</li>
+                            <li>3V Tinto</li>
+                            <li>3V Tinto Rosado</li>
+                            <li>Balero</li>
+                            <li>Circo</li>
+                            <li>Dueto</li>
+                            <li>Blan de Zinfandel 187 ml</li>
+                        </ul>
+                    </div>
+            </div>
+            <!--Eight Section 'Botellas' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-8">
+                    <span class="text-lg font-poppins text-white font-bold">Botellas</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-8" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>1800 Cristalino</li>
+                            <li>1800 Añejo</li>
+                            <li>1800 Reposado</li>
+                            <li>Don Julio 1942</li>
+                            <li>Don Julio 70</li>
+                            <li>Don Julio Reposado</li>
+                            <li>Maestro Dobel Diamante</li>
+                            <li>Buchanan's 12</li>
+                            <li>Buchanan's 18</li>
+                            <li>Chivas 12</li>
+                            <li>Grand Old Parr 12</li>
+                            <li>Johnnie Walker Blue Label</li>
+                            <li>Johnnie Walker Gold Label</li>
+                            <li>Johnnie Walker Red Label</li>
+                            <li>The Macallan 12</li>
+                            <li>Lambrusco</li>
+                            <li>3V Tinto Rosado</li>
+                            <li>3V Tinto</li>
+                        </ul>
+                    </div>
+            </div>
+            <!--Ten Section 'Ron' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-10">
+                    <span class="text-lg font-poppins text-white font-bold">Ron</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-10" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Bacardi Carta Blanca</li>
+                            <li>Bacardi Ron Añejo</li>
+                            <li>Bacardi Ron Solera</li>
+                            <li>Capitan Morgan</li>
+                            <li>Havana 3 Años</li>
+                            <li>Havana 7 Años Añejo</li>
+                            <li>Havana Club Especial</li>
+                            <li>Matusalen Ron</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <!--Eleven Section 'Licores y digestivos' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-11">
+                    <span class="text-lg font-poppins text-white font-bold">Licores y digestivos</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-11" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Bailey's</li>
+                            <li>Rum Chata</li>
+                            <li>Chocoreta</li>
+                            <li>Dequenchon</li>
+                            <li>Shot Pepino</li>
+                            <li>Jolly Ranger</li>
+                            <li>Mecos de chango</li>
+                            <li>Mamada</li>
+                            <li>ABC</li>
+                            <li>Jager Bomb</li>
+                            <li>Vegas Bomb</li>
+                            <li>Churro</li>
+                            <li>Lamborghini</li>
+                            <li>Derrame cerebral</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <!--Twelve Section 'Shots' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-12">
+                    <span class="text-lg font-poppins text-white font-bold">Shots</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-12" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Tumbatoros</li>
+                            <li>Rafaga</li>
+                            <li>Chocoreta</li>
+                            <li>Dequenchon</li>
+                            <li>Shot Pepino</li>
+                            <li>Jolly Ranger</li>
+                            <li>Mecos de chango</li>
+                            <li>Mamada</li>
+                            <li>ABC</li>
+                            <li>Jager Bomb</li>
+                            <li>Vegas Bomb</li>
+                            <li>Churro</li>
+                            <li>Lamborghini</li>
+                            <li>Derrame cerebral</li>
+                            <li>Sotol de cascabel</li>
+                            <li>B.52</li>
+                            <li>Mango toto</li>
+                            <li>Shot Paleta</li>
+                            <li>Mini Blach</li>
+                            <li>Jager Meister</li>
+                            <li>Dequenchon</li>
+                            <li>Shot Pepino</li>
+                            <li>Mecos de chango</li>
+                            <li>Mamada</li>
+                            <li>ABC</li>
+                            <li>Jager Bomb</li>
+                            <li>Vegas Bomb</li>
+                            <li>Churro</li>
+                            <li>Lamborghini</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <!--thirteen Section 'CockTails' -->
+            <div class="border border-yellowCustom rounded-lg overflow-hidden w-[95%] lg:w-[45%] cursor-pointer reveal-top-mod">
+                <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none cursor-pointer"
+                    aria-expanded="false" aria-controls="menu-13">
+                    <span class="text-lg font-poppins text-white font-bold">Cocktails</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-700" fill="none" stroke="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    </button>
+                    <div id="menu-13" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-700 ease-in-out">
+                        <ul class="text text-white font-poppins ml-3.5 mtb-3.5">
+                            <li>Margarita Clásica</li>
+                            <li>Margarita Volteada</li>
+                            <li>Margarita Frappé de Mango</li>
+                            <li>Tequila Sunrise</li>
+                            <li>Paloma</li>
+                            <li>Vampiro</li>
+                            <li>Rafaga</li>
+                            <li>Chocoreta</li>
+                            <li>Jolly Ranger</li>
+                        </ul>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+    <!--Gsap Script-->
     <script>
         gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to(".prev-text", {
+            scrollTrigger: {
+                trigger: ".header-text",
+                start: "20px 10%",
+                end: "+=500px",
+                scrub: true,
+                toggleActions: "restart, pause, reverse, pause"
+            },
+            y: -280,
+            duration: 1
+        });
 
         gsap.to(".text-1", {
             scrollTrigger: {
@@ -65,6 +448,47 @@
         });
 
     </script>
+
+    <!--Script togglers-->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const accordionButtons = document.querySelectorAll('.border.border-yellowCustom button');
+
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const contentWrapper = document.getElementById(button.getAttribute('aria-controls'));
+            const content = contentWrapper.querySelector('ul'); 
+            const svgIcon = button.querySelector('svg');
+
+            if (contentWrapper.classList.contains('h-0')) {
+                contentWrapper.classList.remove('h-0', 'opacity-0');
+                contentWrapper.style.height = content.scrollHeight + 'px';
+                contentWrapper.style.opacity = '1';
+                
+                button.setAttribute('aria-expanded', 'true');
+                svgIcon.classList.add('rotate-180');
+            } else {
+                contentWrapper.style.height = content.scrollHeight + 'px';
+                void contentWrapper.offsetWidth; 
+                
+                contentWrapper.style.height = '0'; 
+                contentWrapper.style.opacity = '0'; 
+                
+                // Después de la transición, resetea la altura para que no afecte otros elementos
+                contentWrapper.addEventListener('transitionend', function handler() {
+                    contentWrapper.classList.add('h-0', 'opacity-0'); // Vuelve a ocultarlo con h-0 y opacity-0
+                    contentWrapper.style.height = ''; // Quita el estilo de altura en línea para dejar que CSS lo maneje
+                    contentWrapper.removeEventListener('transitionend', handler);
+                });
+
+                button.setAttribute('aria-expanded', 'false');
+                svgIcon.classList.remove('rotate-180');
+            }
+        });
+    });
+});
+    </script>
+
 
         <script type="" src="{{url_for('static', filename='js/scroll.js')}}"></script>
     {%endblock%}
