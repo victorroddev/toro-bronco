@@ -14,19 +14,19 @@
 
     <!--items-->
     <div class="container-grid">
-    <img src="{{url_for('static', filename='/images/menu/carlota-limon.webp')}}" alt="Bimbalete" class="img img-1" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/cheescake-frambuesa-2.webp')}}" alt="Bimbalete" class="img img-2" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/cheesecake-frambuesa.webp')}}" alt="Bimbalete" class="img img-3" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/cheesecake-oreo-2.webp')}}" alt="Bimbalete" class="img img-4" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/cheesecake-oreo.webp')}}" alt="Bimbalete" class="img img-5" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/duraznos-flameados.webp')}}" alt="Bimbalete" class="img img-6" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/flan-2.webp')}}" alt="Bimbalete" class="img img-7" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/flan.webp')}}" alt="Bimbalete" class="img img-8" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/fresas-tequila.webp')}}" alt="Bimbalete" class="img img-9" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/mango-tequila.webp')}}" alt="Bimbalete" class="img img-10" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/pastel-3-leches.webp')}}" alt="Bimbalete" class="img img-11" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/pastel-chocolate.webp')}}" alt="Bimbalete" class="img img-12" description="Bimbalete">
-    <img src="{{url_for('static', filename='/images/menu/tiramisu.webp')}}" alt="Bimbalete" class="img img-13" description="Bimbalete">
+    <img src="{{url_for('static', filename='/images/menu/carlota-limon.webp')}}" alt="Carlota de limón" class="img img-1" description="Carlota de limón">
+    <img src="{{url_for('static', filename='/images/menu/cheescake-frambuesa-2.webp')}}" alt="Cheesecake de frambuesa" class="img img-2" description="Cheesecake de frambuesa">
+    <img src="{{url_for('static', filename='/images/menu/cheesecake-frambuesa.webp')}}" alt="Cheesecake de frambuesa" class="img img-3" description="Cheesecake de frambuesa">
+    <img src="{{url_for('static', filename='/images/menu/cheesecake-oreo-2.webp')}}" alt="Cheesecake de oreo" class="img img-4" description="Cheesecake de oreo">
+    <img src="{{url_for('static', filename='/images/menu/cheesecake-oreo.webp')}}" alt="Cheesecake de oreo" class="img img-5" description="Cheesecake de oreo">
+    <img src="{{url_for('static', filename='/images/menu/duraznos-flameados.webp')}}" alt="Duraznos flameados" class="img img-6" description="Duraznos flameados">
+    <img src="{{url_for('static', filename='/images/menu/flan-2.webp')}}" alt="Bimbalete" class="img img-7" description="Flan">
+    <img src="{{url_for('static', filename='/images/menu/flan.webp')}}" alt="Bimbalete" class="img img-8" description="Flan">
+    <img src="{{url_for('static', filename='/images/menu/fresas-tequila.webp')}}" alt="Bimbalete" class="img img-9" description="Fresas al tequila">
+    <img src="{{url_for('static', filename='/images/menu/mango-tequila.webp')}}" alt="Bimbalete" class="img img-10" description="Mangos al tequila">
+    <img src="{{url_for('static', filename='/images/menu/pastel-3-leches.webp')}}" alt="Bimbalete" class="img img-11" description="Pastel de 3 leches">
+    <img src="{{url_for('static', filename='/images/menu/pastel-chocolate.webp')}}" alt="Bimbalete" class="img img-12" description="Pastel de Chocolate">
+    <img src="{{url_for('static', filename='/images/menu/tiramisu.webp')}}" alt="Bimbalete" class="img img-13" description="Tiramisú">
         <div class="container-img">
             <img src="" alt="" class="img-show">
             <i class='bx  bx-x'></i>
@@ -36,25 +36,52 @@
 
 
     <div class="flex flex-col cursor-pointer">       
-                <div class="mx-auto py-8 w-[95%] max-w-[1200px]">
+        <div class="mx-auto py-8 w-[95%] max-w-[1200px]">
                     <div class="space-y-4 ">
                         <!--first question-->
                         <div class="border border-yellowCustom rounded-lg overflow-hidden ">
                             <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none"
-                                    aria-expanded="false" aria-controls="faq-answer-5">
-                                <span class="text-lg font-poppins text-white text-center font-bold">Descubre todas nuestras Especialidades</span>
+                                    aria-expanded="false" aria-controls="menu-toggle">
+                                <span class="text-lg font-poppins text-white  font-bold">Descubre nuestros postres</span>
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div id="faq-answer-5" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%] p-4">
-                                <p class="text-white font-poppins text-center">Bimbalete Bronco Gigante <span>(res o puerco 500gr)</span></p>
-                                <p class="text-white font-poppins text-center">Bimbalete de Camaron</p>
-                                <p class="text-white font-poppins text-center">Carnitas (1 kilo, 3/4, 1/2, 1/4)</p>
+                            <div id="menu-toggle" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%]">
+                                <ul class="text-white font-poppins ml-3 flex flex-col gap-2">
+                                <li>Banana Split</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Durazno al Tequila</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Mangos al Tequila</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Fresas al Tequila</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Pastel de Chocolate</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Pastel de 3 Leches</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Copa de Nieve</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Pastel con Nieve</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Carlota</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Pay Oreo</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Flan</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Tiramisu</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Pastel Zanahoria</li>
+                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                <li>Pastel Frambuesa</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
+        </div>
+    </div>
 
     <style>
         
@@ -66,11 +93,11 @@
         .container-grid{
             margin-inline: auto;
             width: 95%;
-            height: auto;
+            
             max-width: 1200px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(16, 1fr);
+            grid-template-rows: repeat(20, 100px);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             gap: 0.1rem;
@@ -84,19 +111,82 @@
             transition: filter .5s;
         }
         
-        .img-1 { grid-area: 1 / 1 / 2 / 2; }
-        .img-2 { grid-area: 1 / 1 / 4 / 2; }
-        .img-3 { grid-area: 4 / 1 / 5 / 2; }
-        .img-4 { grid-area: 4 / 1 / 7 / 2; }
-        .img-5 { grid-area: 7 / 1 / 11 / 2; }
-        .img-6 { grid-area: 11 / 1 / 12 / 2; }
-        .img-7 { grid-area: 12 / 1 / 13 / 2; }
-        .img-8 { grid-area: 13 / 1 / 15 / 2; }
-        .img-9 { grid-area: 15 / 1 / 17 / 2; }
-        .img-10 { grid-area: 1 / 2 / 6 / 3; }
-        .img-11 { grid-area: 6 / 2 / 7 / 3; }
-        .img-12 { grid-area: 7 / 2 / 9 / 3; }
-        .img-13 { grid-area: 9 / 2 / 17 / 3; }
+        .img-1 {
+            grid-row: span 3 / span 3;
+        }
+
+        .img-2 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 4;
+            }
+
+.img-3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 6;
+}
+
+.img-4 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 8;
+}
+
+.img-5 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 11;
+}
+
+.img-6 {
+    grid-row: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 14;
+}
+
+.img-7 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 18;
+}
+
+.img-8 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.img-9 {
+    grid-row: span 6 / span 6;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.img-10 {
+    grid-row: span 5 / span 5;
+    grid-column-start: 2;
+    grid-row-start: 9;
+}
+
+.img-11 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 14;
+}
+
+.img-12 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 17;
+}
+
+.img-13 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 19;
+}
+        
 
         .img{
             width: 100%;

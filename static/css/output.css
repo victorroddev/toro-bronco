@@ -406,6 +406,14 @@
   .table {
     display: table;
   }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
+  .size-7 {
+    width: calc(var(--spacing) * 7);
+    height: calc(var(--spacing) * 7);
+  }
   .size-10 {
     width: calc(var(--spacing) * 10);
     height: calc(var(--spacing) * 10);
@@ -437,6 +445,12 @@
   .h-0 {
     height: calc(var(--spacing) * 0);
   }
+  .h-0\.5 {
+    height: calc(var(--spacing) * 0.5);
+  }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
   .h-2 {
     height: calc(var(--spacing) * 2);
   }
@@ -445,6 +459,9 @@
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
+  }
+  .h-\[0\.5px\] {
+    height: 0.5px;
   }
   .h-\[2px\] {
     height: 2px;

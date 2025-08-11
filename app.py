@@ -46,6 +46,18 @@ def mixologia():
     lang = get_user_language()
     return render_template(f'{lang}/menu/mixologia.html')
 
+@app.route('/ninos')
+def ninos():
+    lang = get_user_language()
+    return render_template(f'{lang}/menu/ninos.html')
+
+@app.route('/mariscos')
+def mariscos():
+    lang = get_user_language()
+    return render_template(f'{lang}/menu/mariscos.html')
+
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=5500)
