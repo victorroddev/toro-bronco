@@ -57,6 +57,15 @@ def mariscos():
     return render_template(f'{lang}/menu/mariscos.html')
 
 
+@app.route('/cortes')
+def cortes():
+    lang = get_user_language()
+    return render_template(f'{lang}/menu/cortes.html')    
+
+@app.route('/comaleros')
+def comaleros():
+    lang = get_user_language()
+    return render_template(f'{lang}/menu/comaleros.html') 
 
 
 if __name__ == '__main__':

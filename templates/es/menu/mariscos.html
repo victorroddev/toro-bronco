@@ -10,23 +10,23 @@
 <body>
     {%block content %}
     <h2 class="title">Conoce nuestros</h2>
-    <h2 class="title main-title mb-6">Postres</h2>
+    <h2 class="title main-title mb-6 text-center">Mariscos y pescados</h2>
 
     <!--items-->
     <div class="container-grid">
-    <img src="{{url_for('static', filename='/images/menu/carlota-limon.webp')}}" alt="Carlota de limón" class="img img-1" description="Carlota de limón">
-    <img src="{{url_for('static', filename='/images/menu/cheescake-frambuesa-2.webp')}}" alt="Cheesecake de frambuesa" class="img img-2" description="Cheesecake de frambuesa">
-    <img src="{{url_for('static', filename='/images/menu/cheesecake-frambuesa.webp')}}" alt="Cheesecake de frambuesa" class="img img-3" description="Cheesecake de frambuesa">
-    <img src="{{url_for('static', filename='/images/menu/cheesecake-oreo-2.webp')}}" alt="Cheesecake de oreo" class="img img-4" description="Cheesecake de oreo">
-    <img src="{{url_for('static', filename='/images/menu/cheesecake-oreo.webp')}}" alt="Cheesecake de oreo" class="img img-5" description="Cheesecake de oreo">
-    <img src="{{url_for('static', filename='/images/menu/duraznos-flameados.webp')}}" alt="Duraznos flameados" class="img img-6" description="Duraznos flameados">
-    <img src="{{url_for('static', filename='/images/menu/flan-2.webp')}}" alt="Bimbalete" class="img img-7" description="Flan">
-    <img src="{{url_for('static', filename='/images/menu/flan.webp')}}" alt="Bimbalete" class="img img-8" description="Flan">
-    <img src="{{url_for('static', filename='/images/menu/fresas-tequila.webp')}}" alt="Bimbalete" class="img img-9" description="Fresas al tequila">
-    <img src="{{url_for('static', filename='/images/menu/mango-tequila.webp')}}" alt="Bimbalete" class="img img-10" description="Mangos al tequila">
-    <img src="{{url_for('static', filename='/images/menu/pastel-3-leches.webp')}}" alt="Bimbalete" class="img img-11" description="Pastel de 3 leches">
-    <img src="{{url_for('static', filename='/images/menu/pastel-chocolate.webp')}}" alt="Bimbalete" class="img img-12" description="Pastel de Chocolate">
-    <img src="{{url_for('static', filename='/images/menu/tiramisu.webp')}}" alt="Bimbalete" class="img img-13" description="Tiramisú">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/brocheta-camaron.webp')}}" alt="Brocheta de Camarón" class="img img-1" description="Brocheta de Camarón">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/brocheta-camaron-02.webp')}}" alt="Brocheta de Camarón" class="img img-2" description="Brocheta de Camarón">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/camarones-fiesta.webp')}}" alt="Camaron Fiesta" class="img img-3" description="Camaron Fiesta">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/pulpo-brasas.webp')}}" alt="Pulpo a las Brasas" class="img img-4" description="Pulpo a las Brasas">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/pulpo-brasas-02.webp')}}" alt="Pulpo a las Brasas" class="img img-5" description="Pulpo a las Brasas">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/camarones-fiesta-02.webp')}}" alt="Camaron Fiesta" class="img img-6" description="Camaron Fiesta">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/pulpo-brasas-03.webp')}}" alt="Pulpo a las Brasas" class="img img-7" description="Pulpo a las Brasas">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/camarones-fiesta-03.webp')}}" alt="Camaron Fiesta" class="img img-8" description="Camaron Fiesta">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/brocheta-camaron-03.webp')}}" alt="Brocheta de Camarón" class="img img-9" description="Brocheta de Camarón">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/camarones-fiesta-04.webp')}}" alt="Camaron Fiesta" class="img img-10" description="Camaron Fiesta">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/brocheta-camaron-04.webp')}}" alt="Brocheta de Camarón" class="img img-11" description="Brocheta de Camarón">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/camarones-fiesta-05.webp')}}" alt="Camaron Fiesta" class="img img-12" description="Camaron Fiesta">
+    <img src="{{url_for('static', filename='/images/menu/mariscos/camarones-fiesta-06.webp')}}" alt="Camaron Fiesta" class="img img-13" description="Camaron Fiesta">
         <div class="container-img">
             <img src="" alt="" class="img-show">
             <i class='bx  bx-x'></i>
@@ -41,19 +41,19 @@
                         <!--first question-->
                         <div class="border border-yellowCustom rounded-lg overflow-hidden ">
                             <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none"
-                                    aria-expanded="false" aria-controls="menu-toggle">
+                                    aria-expanded="false" aria-controls="menu-mariscos/toggle">
                                 <span class="text-lg font-poppins text-white  font-bold">Todos los mariscos y pescados</span>
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div id="menu-toggle" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%]">
+                            <div id="menu-mariscos/toggle" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%]">
                                 <ul class="text-white font-poppins ml-3 flex flex-col gap-2">
                                     <li>Camaron Empanizado</li>
                                     <div class="w-full h-[0.5px] bg-yellowCustom"></div>
                                     <li>Camaron Fiesta</li>
                                     <div class="w-full h-[0.5px] bg-yellowCustom"></div>
-                                    <li>Brocheta de Camaron</li>
+                                    <li>Brocheta de Camarón</li>
                                     <div class="w-full h-[0.5px] bg-yellowCustom"></div>
                                     <li>Camaron Mojo de Ajo</li>
                                     <div class="w-full h-[0.5px] bg-yellowCustom"></div>
@@ -71,7 +71,7 @@
                                     <div class="w-full h-[0.5px] bg-yellowCustom"></div>
                                     <li class="flex flex-row items-center gap-3">
                                     <p>Pulpo a las Brasas</p>
-                                        <img src="{{url_for('static', filename='images/logo-josper-white.png')}}" alt="Logo Josper" class="lg:size-40 size-14">
+                                        <img src="{{url_for('static', filename='images/logo-josper-white.png')}}" alt="Logo Josper" class="lg:size-16 size-10">
                                     </li>
                                 </ul>
                             </div>
@@ -97,7 +97,7 @@
             grid-template-rows: repeat(20, 100px);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
-            gap: 0.1rem;
+            gap: 0.5rem;
             }
 
         

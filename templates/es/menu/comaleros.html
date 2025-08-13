@@ -3,49 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidades | Toro Bronco</title>
+    <title>Comaleros | Toro Bronco</title>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     {%extends "base.html" %}
 </head>
 <body>
     {%block content %}
-    <h2 class="title">Conoce nuestras</h2>
-    <h2 class="title main-title mb-6">Especialidades</h2>
+    <h2 class="title main-title mb-6">Comaleros</h2>
+
+    <p class="text-center text-white font-poppins text-lg mb-6">La tradición de nuestro sabor</p>
 
     <!--items-->
-    <div class="container-grid">
-        <img src="{{url_for('static', filename='/images/menu/bimbalete-01.webp')}}" alt="Bimbalete" class="img img-1" description="Bimbalete">
-        <img src="{{url_for('static', filename='/images/menu/bimbalete-02.webp')}}" alt="Bimbalete 2" class="img img-2" description="Bimbalete">
-        <img src="{{url_for('static', filename='/images/menu/carnitas-01.webp')}}" alt="" class="img img-3" description="Carnitas">
-        <img src="{{url_for('static', filename='/images/menu/carnitas-02.webp')}}" alt="" class="img img-4" description="Carnitas">
-        <img src="{{url_for('static', filename='/images/menu/carnitas-3.webp')}}" alt="Bimbalete 2" class="img img-5" description="Carnitas">
-        <div class="container-img">
-            <img src="" alt="" class="img-show">
-            <i class='bx  bx-x'></i>
-            <p class="copy"></p>
+    <div class="flex mx-auto w-full max-w-[1200px]">
+        <div class="container-grid ">
+
+        <img src="{{url_for('static', filename='/images/menu/comaleros/comalero-01.webp')}}" alt="Rib Eye" class="img img-1" description="Comalero (papas asadas)">
+
+        <img src="{{url_for('static', filename='/images/menu/comaleros/comalero-mar-tierra-01.webp')}}" alt="Rib Eye" class="img img-2" description="Comalero mar y tierra">  
+        
+        <img src="{{url_for('static', filename='/images/menu/comaleros/comalero-mar-tierra-02.webp')}}" alt="Rib Eye" class="img img-3" description="Comalero mar y tierra">
+        
+        <img src="{{url_for('static', filename='/images/menu/comaleros/comalero.webp')}}" alt="Rib Eye" class="img img-4" description="Comalero sirloin y puerco">
+        
+        <img src="{{url_for('static', filename='/images/menu/comaleros/comalero-mar-tierra.webp')}}" alt="Rib Eye" class="img img-5" description="Comalero mar y tierra">
+            <div class="container-img">
+                <img src="" alt="" class="img-show">
+                <i class='bx  bx-x'></i>
+                <p class="copy"></p>
+            </div>
         </div>
+
     </div>
+    
 
-
-    <div class="flex flex-col cursor-pointer">       
+    <div class="flex flex-col ">       
         <div class="mx-auto py-8 w-[95%] max-w-[1200px]">
                     <div class="space-y-4 ">
                         <!--first question-->
                         <div class="border border-yellowCustom rounded-lg overflow-hidden ">
-                            <button class="w-full text-left p-4 flex justify-between items-center focus:outline-none"
-                                    aria-expanded="false" aria-controls="menu-toggle">
-                                <span class="text-lg font-poppins text-white font-bold">Descubre todas nuestras Especialidades</span>
+                            <button class="w-full cursor-pointer text-left p-4 flex justify-between items-center focus:outline-none"
+                                    aria-expanded="false" aria-controls="menu-comaleros/toggle">
+                                <span class="text-lg font-poppins text-white  font-bold">Nuestros comaleros</span>
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div id="menu-toggle" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%]">
+                            <div id="menu-comaleros/toggle" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%]">
                                 <ul class="text-white font-poppins ml-3 flex flex-col gap-2">
-                                <li>Bimbalete bronco gigante (res o puerco) 500gr.</li>
-                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
-                                <li>Bimbalete de camarón</li>
-                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
-                                <li>Carnitas <span class="font-light">(1 kilo, 3/4, 1/4, 1/2)</span></li>
+                                    <li>Grande <br> <span class="text-sm">(SIRLOIN Y PUERCO. PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Chico <br> <span class="text-sm">(SIRLOIN Y PUERCO. PARA 2 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>El comalero de carnitas <br><span class="text-sm">(PARA 2 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>El comalero de carnitas <br> <span class="text-sm">(PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>El comalero de camarón <br> <span class="text-sm">(PARA 2 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>El comalero de camarón <br><span class="text-sm">(PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>El comalero taquero <br> <span class="text-sm">(PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>El comalero especial de sirloin <br> <span class="text-sm">(PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Chico especial de sirloin <br><span class="text-sm">(PARA 2 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>El comalero especial de pechuga de pollo <br><span class="text-sm">(PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Chico especial de pechuga de pollo <br> <span class="text-sm">(PARA 2 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Comalero especial de tripa <br> <span class="text-sm">(PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Comalero chico especial de tripa <br> <span class="text-sm">(PARA 2 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Comalero especial arrachera <br> <span class="text-sm">(PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Comalero chico especial arrachera <br><span class="text-sm">(PARA 2 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Comalero grande rib eye <br> <span class="text-sm">(PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Comalero chico rib eye <br> <span class="text-sm">(PARA 2 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Comalero grande de pulpo <br> <span class="text-sm">(PARA 5 PERSONAS)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Comalero chico de pulpo <br> <span class="text-sm">(PARA 2 PERSONAS)</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -62,21 +103,21 @@
 
         .container-grid{
             margin-inline: auto;
-            display: grid;
-            height: 100vh;
             width: 95%;
-            max-width: 1200px;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(4,1fr);
-            grid-template-areas:
-            "img1 img3"
-            "img1 img3"
-            "img2 img3"
-            "img2 img5"
-            "img4 img5"
-            "img4 img5";
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;  
+            grid-template-rows: repeat(3, 300px);
+            grid-template-areas: 
+            "img1 img2"
+            "img3 img4"
+            "img5 img4"
+            ;
             gap: 0.5rem;
-        }
+            }
+            
+
+        
 
         .img:hover{
             filter: grayscale(50%);
@@ -85,9 +126,9 @@
         }
         
         .img-1{
-            grid-area: img1;
+            grid-area: img4;
         }
-
+        
         .img-2{
             grid-area: img2;
         }
@@ -97,13 +138,13 @@
         }
 
         .img-4{
-            grid-area: img4;
+            grid-area: img1;
         }
-        
+
         .img-5{
             grid-area: img5;
         }
-
+    
         .img{
             width: 100%;
             height: 100%;
@@ -170,110 +211,114 @@
             cursor: pointer;
         }
 
-.container-img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    pointer-events: none; /* Deshabilita interacciones cuando está oculto */
-    transition: opacity 0.3s ease;
-}
-
-.container-img.move {
-    opacity: 1;
-    pointer-events: auto; /* Habilita interacciones cuando está visible */
-}
-
-/* Para la imagen mostrada */
-.img-show {
-    max-width: 90vw;
-    max-height: 90vh;
-    object-fit: contain;
-    display: block;
-    transform: scale(0.7); /* Para un efecto de entrada */
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    object-fit: contain;
-}
-
-.img-show.show {
-    transform: scale(1);
-    opacity: 1;
-}
-
-/* Estilos para el texto */
-.copy {
-    position: absolute;
-    bottom: 5%;
-    color: white;
-    font-size: 1.2em;
-    text-align: center;
-    width: 100%;
-}
-
-/* Estilos para el botón de cerrar (bx) */
-.bx {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-/* Estilos para los botones de navegación */
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 3em;
-    cursor: pointer;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    user-select: none; /* Evita que el texto se seleccione al hacer clic rápido */
-    z-index: 1001;
-    display: none; /* Inicialmente ocultos */
-}
-
-.nav-button.prev {
-    left: 20px;
-}
-
-.nav-button.next {
-    right: 20px;
-}
-
-.nav-button:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-/* Media query para móviles (ajusta según necesites) */
-@media (max-width: 768px) {
-    .main-title{
-        font-size: 2.5rem;
+    .container-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none; /* Deshabilita interacciones cuando está oculto */
+        transition: opacity 0.3s ease;
     }
-    
-    .nav-button {
+
+    .container-img.move {
+        opacity: 1;
+        pointer-events: auto; /* Habilita interacciones cuando está visible */
+    }
+
+    /* Para la imagen mostrada */
+    .img-show {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        display: block;
+        transform: scale(0.7); /* Para un efecto de entrada */
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        object-fit: contain;
+    }
+
+    .img-show.show {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    /* Estilos para el texto */
+    .copy {
+        position: absolute;
+        bottom: 5%;
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Estilos para el botón de cerrar (bx) */
+    .bx {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
         font-size: 2em;
-        padding: 5px;
+        cursor: pointer;
+        z-index: 1001;
     }
-    .prev {
-        left: 10px;
+
+    /* Estilos para los botones de navegación */
+    .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 3em;
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        user-select: none; /* Evita que el texto se seleccione al hacer clic rápido */
+        z-index: 1001;
+        display: none; /* Inicialmente ocultos */
     }
-    .next {
-        right: 10px;
+
+    .nav-button.prev {
+        left: 20px;
     }
-}
+
+    .nav-button.next {
+        right: 20px;
+    }
+
+    .nav-button:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Media query para móviles (ajusta según necesites) */
+    @media (max-width: 768px) {
+        .container-grid{
+            grid-template-rows: repeat(3, 100px);
+        }
+
+        .main-title{
+            font-size: 2.5rem;
+        }
+        
+        .nav-button {
+            font-size: 2em;
+            padding: 5px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    }
 
         
     </style>
