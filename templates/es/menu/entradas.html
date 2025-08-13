@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entradas | Toro Bronco</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    {%extends "base.html" %}
+</head>
+<body>
+    {%block content %}
+    <h2 class="title main-title mb-6">Entradas</h2>
+
+
+    <!--items-->
+    <div class="flex mx-auto w-full max-w-[1200px]">
+        <div class="container-grid ">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/champinones-ajillo-01.webp')}}" alt="Champiñones al ajillo" class="img img-1" description="Champiñones al ajillo">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/champinones-ajillo-02.webp')}}" alt="Champiñones al ajillo" class="img img-2" description="Champiñones al ajillo">  
+        
+        <img src="{{url_for('static', filename='/images/menu/entradas/chicharron-rib-eye-01.webp')}}" alt="Chicharron de rib eye" class="img img-3" description="Chicharron de rib eye">
+        
+        <img src="{{url_for('static', filename='/images/menu/entradas/chorizada-01.webp')}}" alt="Chorizada" class="img img-4" description="Chorizada">
+        
+        <img src="{{url_for('static', filename='/images/menu/entradas/chorizada-02.webp')}}" alt="Chorizada" class="img img-5" description="Chorizada">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/lamina-rib-eye-01.webp')}}" alt="Lamina de rib eye" class="img img-6" description="Lamina de rib eye">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/lamina-rib-eye-02.webp')}}" alt="Lamina de rib eye" class="img img-7" description="Lamina de rib eye">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/nachos-broncos-01.webp')}}" alt="Nachos broncos" class="img img-8" description="Nachos broncos">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/nachos-broncos-02.webp')}}" alt="Nachos broncos" class="img img-9" description="Nachos broncos">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/nachos-broncos-03.webp')}}" alt="Nachos broncos" class="img img-10" description="Nachos broncos">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/queso-champinones-01.webp')}}" alt="Queso champiñones" class="img img-11" description="Queso champiñones">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/queso-champinones-02.webp')}}" alt="Queso champiñones" class="img img-12" description="Queso champiñones">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/queso-chorizo-01.webp')}}" alt="Queso con chorizo" class="img img-13" description="Queso con chorizo">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/queso-chorizo-02.webp')}}" alt="Queso con chorizo" class="img img-14" description="Queso con chorizo">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/queso-mexicano-01.webp')}}" alt="Queso mexicano" class="img img-15" description="Queso mexicano">
+        
+        <img src="{{url_for('static', filename='/images/menu/entradas/queso-mexicano-02.webp')}}" alt="Queso mexicano" class="img img-16" description="Queso mexicano">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/queso-rajas-01.webp')}}" alt="Queso con rajas de chile" class="img img-17" description="Queso con rajas de chile">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/chicharron-rib-eye-02.webp')}}" alt="Queso con rajas de chile" class="img img-18" description="Queso con rajas de chile">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/queso-rajas-02.webp')}}" alt="Queso con rajas de chile" class="img img-19" description="Queso con rajas de chile">
+
+        <img src="{{url_for('static', filename='/images/menu/entradas/tuetano-brasas-01.webp')}}" alt="Tuetano a las brasas" class="img img-20" description="Tuetano a las brasas">
+
+            <div class="container-img">
+                <img src="" alt="" class="img-show">
+                <i class='bx  bx-x'></i>
+                <p class="copy"></p>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <div class="flex flex-col ">       
+        <div class="mx-auto py-8 w-[95%] max-w-[1200px]">
+                    <div class="space-y-4 ">
+                        <!--first question-->
+                        <div class="border border-yellowCustom rounded-lg overflow-hidden ">
+                            <button class="w-full cursor-pointer text-left p-4 flex justify-between items-center focus:outline-none"
+                                    aria-expanded="false" aria-controls="menu-entradas/toggle">
+                                <span class="text-lg font-poppins text-white  font-bold">Nuestras entradas</span>
+                                <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="menu-entradas/toggle" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%]">
+                                <ul class="text-white font-poppins ml-3 flex flex-col gap-2">
+                                    <li class="flex flex-row items-center gap-3">
+                                    <p>Tuetano a las brasas</p>
+                                        <img src="{{url_for('static', filename='images/logo-josper-white.png')}}" alt="Logo Josper" class="lg:size-16 size-10">
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Queso con:</p>
+                                        <p>Champiñónes</p>
+                                        <p>Natural</p>
+                                        <p>Con rajas de chile</p>
+                                        <p>Al pastor</p>
+                                        <p>Bronco</p>
+                                        <p>Con chorizo</p>
+                                        <p>Mexicano</p>
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Botana del queso loco</p>
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Champiñónes al ajillo</p>
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Esparragos a la parrilla</p>
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Chicharron de rib eye</p>
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Coctel grande de camaron</p>
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Coctel mediano de camaron</p>
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Nachos bronco</p>
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Nachos bronco con rib eye y arrachera</p>
+                                    </li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>
+                                        <p>Laminas de rib eye</p>
+                                        <br>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+    <style>
+        
+
+        .bx{
+            color: white;
+        }
+
+        .container-grid{
+            margin-inline: auto;
+            width: 95%;
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;  
+            grid-template-rows:  repeat(2, 200px 200px 150px 180px 200px 250px 180px);
+            grid-template-areas: 
+            "img1 img2 img3"
+            "img1 img2 img3"
+            "img4 img5 img6"
+            "img4 img5 img6"
+            "img7 img8 img9"
+            "img7 img8 img9"
+            "img10 img11 img12"
+            "img10 img11 img12"
+            "img13 img14 img15"
+            "img13 img14 img15"
+            "img16 img17 img18"
+            "img16 img17 img18"
+            "img19 img20 ."
+            "img19 img20 ."
+            ;
+            gap: 0.5rem;
+            }
+            
+
+        
+
+        .img:hover{
+            filter: grayscale(50%);
+            cursor: pointer;
+            transition: filter .5s;
+        }
+        
+        .img-1{
+            grid-area: img1;
+        }
+        
+        .img-2{
+            grid-area: img2;
+        }
+
+        .img-3{
+            grid-area: img3;
+        }
+
+        .img-4{
+            grid-area: img4;
+        }
+
+        .img-5{
+            grid-area: img5;
+        }
+
+        .img-6{
+            grid-area: img6;
+        }
+
+        .img-7{
+            grid-area: img7;
+        }
+
+        .img-8{
+            grid-area: img8;
+        }
+
+        .img-9{
+            grid-area: img9;
+        }
+
+        .img-10{
+            grid-area: img10;
+        }
+
+        .img-11{
+            grid-area: img11;
+        }
+        
+        .img-12{
+            grid-area: img12;
+        }
+
+        .img-13{
+            grid-area: img13;
+        }
+
+        .img-14{
+            grid-area: img14;
+        }
+
+        .img-15{
+            grid-area: img15;
+        }
+
+        .img-16{
+            grid-area: img16;
+        }
+
+        .img-17{
+            grid-area: img17;
+        }
+
+        .img-18{
+            grid-area: img18;
+        }
+
+        .img-19{
+            grid-area: img19;
+        }
+
+        .img-20{
+            grid-area: img20;
+        }
+
+    
+        .img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title{
+            -webkit-text-stroke: 1px #E6AF2E;
+            font-family: 'Poppins';
+            color: transparent;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .main-title{
+            color:white;
+            font-size: 3.5rem;
+        }
+
+        .container-img{
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform .4s ease-in;
+        }
+
+        .move{
+            transform: translateX(0);
+        }
+
+        .img-show{
+            height: 80%;
+            transform: scale(0);
+            display: block;
+            object-fit: cover;
+            transition: transform .8s .4s;
+
+        }
+
+        .show{
+            transform: scale(1);
+        }
+
+        .copy{
+            position: fixed;
+            bottom: 40px;
+            color: white;
+        }
+
+        .bx.bx-x{
+            position: absolute;
+            color: white;
+            top: 20px;
+            right: 10px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+    .container-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none; /* Deshabilita interacciones cuando está oculto */
+        transition: opacity 0.3s ease;
+    }
+
+    .container-img.move {
+        opacity: 1;
+        pointer-events: auto; /* Habilita interacciones cuando está visible */
+    }
+
+    /* Para la imagen mostrada */
+    .img-show {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        display: block;
+        transform: scale(0.7); /* Para un efecto de entrada */
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        object-fit: contain;
+    }
+
+    .img-show.show {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    /* Estilos para el texto */
+    .copy {
+        position: absolute;
+        bottom: 5%;
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Estilos para el botón de cerrar (bx) */
+    .bx {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 2em;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    /* Estilos para los botones de navegación */
+    .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 3em;
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        user-select: none; /* Evita que el texto se seleccione al hacer clic rápido */
+        z-index: 1001;
+        display: none; /* Inicialmente ocultos */
+    }
+
+    .nav-button.prev {
+        left: 20px;
+    }
+
+    .nav-button.next {
+        right: 20px;
+    }
+
+    .nav-button:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Media query para móviles (ajusta según necesites) */
+    @media (max-width: 768px) {
+        .container-grid{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr 0.5fr); 
+
+            grid-template-areas: 
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8"
+            "img9 img10"
+            "img11 img12"
+            "img13 img14"
+            "img15 img16"
+            "img17 img18"
+            "img19 img20";
+        }
+
+        .main-title{
+            font-size: 2.5rem;
+        }
+        
+        .nav-button {
+            font-size: 2em;
+            padding: 5px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    }
+
+        
+    </style>
+<!--Script light Gallery-->
+<script>
+    addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.img');
+        const containerImage = document.querySelector('.container-img');
+        const imageContainer = document.querySelector('.img-show');
+        const copy = document.querySelector('.copy');
+        const closeModal = document.querySelector('.bx');
+
+        
+        let currentIndex = 0;
+
+        // Navigation elements
+        const prevButton = document.createElement('div');
+        prevButton.classList.add('nav-button', 'prev');
+        prevButton.innerHTML = '&#10094;'; // Left arrow
+        containerImage.appendChild(prevButton);
+
+        const nextButton = document.createElement('div');
+        nextButton.classList.add('nav-button', 'next');
+        nextButton.innerHTML = '&#10095;'; // Right arrow
+        containerImage.appendChild(nextButton);
+
+        
+        images.forEach((image, index) => {
+            image.addEventListener('click', () => {
+                currentIndex = index; 
+                addImage(image.getAttribute('src'), image.getAttribute('description'));
+            });
+        });
+
+        const addImage = (srcImage, description) => {
+            // 
+            containerImage.classList.add('move');
+            imageContainer.classList.add('show');
+            imageContainer.src = srcImage;
+            copy.innerHTML = description;
+            prevButton.style.display = 'block';
+            nextButton.style.display = 'block';
+        };
+
+        closeModal.addEventListener('click', () => {
+            imageContainer.classList.remove('show');
+            containerImage.classList.remove('move');
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+        });
+
+        const changeImage = (direction) => {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1; 
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0; 
+            }
+            const newImage = images[currentIndex];
+            addImage(newImage.getAttribute('src'), newImage.getAttribute('description'));
+        };
+
+        // Navigation buttons listeners
+        prevButton.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            changeImage(-1);
+        });
+
+        nextButton.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            changeImage(1);
+        });
+
+        // Event listener to close modal 
+        containerImage.addEventListener('click', (e) => {
+            
+            if (e.target === containerImage) {
+                containerImage.classList.remove('move');
+                imageContainer.classList.remove('show');
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            }
+        });
+
+        // --- Funcionalidad de Swipe para Móviles ---
+        let startX; // Coordenada X inicial del toque
+
+        imageContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        imageContainer.addEventListener('touchend', (e) => {
+            if (startX === undefined || startX === null) return; // Mejor comprobación de si startX fue inicializado
+
+            const endX = e.changedTouches[0].clientX;
+            const diffX = startX - endX; // Diferencia para determinar la dirección del swipe
+
+            if (Math.abs(diffX) > 50) { // Umbral para considerar un swipe válido (ej. 50px)
+                if (diffX > 0) {
+                    // Swipe a la izquierda (desplazar a la siguiente imagen)
+                    changeImage(1);
+                } else {
+                    // Swipe a la derecha (desplazar a la imagen anterior)
+                    changeImage(-1);
+                }
+            }
+            startX = null; // Reinicia startX
+        });
+    });
+</script>
+
+<!--Script toggler-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const accordionButtons = document.querySelectorAll('.border.border-yellowCustom button');
+
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const contentWrapper = document.getElementById(button.getAttribute('aria-controls'));
+            const content = contentWrapper.querySelectorAll('p'); // Selecciona el párrafo dentro del contenedor
+            const svgIcon = button.querySelector('svg');
+
+            // Alternar la visibilidad y animación
+            if (contentWrapper.classList.contains('h-0')) {
+                // Abre el acordeón
+                contentWrapper.classList.remove('h-0', 'opacity-0');
+                // Establece la altura del contenedor a la altura real de su contenido
+                // Usa 'scrollHeight' para obtener la altura total del contenido, incluyendo el padding
+                contentWrapper.style.height = content.scrollHeight + 'px';
+                contentWrapper.style.opacity = '1';
+                
+                button.setAttribute('aria-expanded', 'true');
+                svgIcon.classList.add('rotate-180');
+            } else {
+                // Cierra el acordeón
+                // Primero establece la altura a su valor actual para que la transición funcione
+                contentWrapper.style.height = content.scrollHeight + 'px';
+                // Fuerza un reflow para asegurar que el navegador registre la altura actual
+                void contentWrapper.offsetWidth; 
+                
+                contentWrapper.style.height = '0'; // Anima a cero
+                contentWrapper.style.opacity = '0'; // Anima la opacidad a cero
+                
+                // Después de la transición, resetea la altura para que no afecte otros elementos
+                contentWrapper.addEventListener('transitionend', function handler() {
+                    contentWrapper.classList.add('h-0', 'opacity-0'); // Vuelve a ocultarlo con h-0 y opacity-0
+                    contentWrapper.style.height = ''; // Quita el estilo de altura en línea para dejar que CSS lo maneje
+                    contentWrapper.removeEventListener('transitionend', handler);
+                });
+
+                button.setAttribute('aria-expanded', 'false');
+                svgIcon.classList.remove('rotate-180');
+            }
+        });
+    });
+});
+</script>
+
+    {%endblock%}
+</body>
+</html>

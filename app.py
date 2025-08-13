@@ -65,7 +65,12 @@ def cortes():
 @app.route('/comaleros')
 def comaleros():
     lang = get_user_language()
-    return render_template(f'{lang}/menu/comaleros.html') 
+    return render_template(f'{lang}/menu/comaleros.html')
+
+@app.route('/entradas')
+def entradas():
+    lang = get_user_language()
+    return render_template(f'{lang}/menu/entradas.html')
 
 
 if __name__ == '__main__':
