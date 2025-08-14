@@ -14,7 +14,7 @@
 
     <!--items-->
     <div class="flex mx-auto w-full max-w-[1200px]">
-        <div class="container-grid ">
+        <div class="gallery overflow-hidden">
 
         <img src="{{url_for('static', filename='/images/menu/entradas/champinones-ajillo-01.webp')}}" alt="Champiñones al ajillo" class="img img-1" description="Champiñones al ajillo">
 
@@ -147,120 +147,90 @@
             color: white;
         }
 
-        .container-grid{
-            margin-inline: auto;
-            width: 95%;
-            max-width: 1400px;
+        .gallery{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;  
-            grid-template-rows:  repeat(2, 200px 200px 150px 180px 200px 250px 180px);
-            grid-template-areas: 
-            "img1 img2 img3"
-            "img1 img2 img3"
-            "img4 img5 img6"
-            "img4 img5 img6"
-            "img7 img8 img9"
-            "img7 img8 img9"
-            "img10 img11 img12"
-            "img10 img11 img12"
-            "img13 img14 img15"
-            "img13 img14 img15"
-            "img16 img17 img18"
-            "img16 img17 img18"
-            "img19 img20 ."
-            "img19 img20 ."
-            ;
-            gap: 0.5rem;
-            }
-            
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: minmax(100px, auto);
+            grid-auto-flow: row;
+            grid-gap: 5px
+        }
 
+        .img-1{
+            grid-column: span 2;
+            grid-row: span 2;
+
+        }
+
+        .img-2{
+            grid-column: span 1;
+        }
+
+        .img-3{
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .img-5{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+   
+
+        .img-4{
+            grid-column: span 1;
+        }
+
+          .img-6{
+            grid-column: span 2;
+            grid-row: span 3;
+        }
         
+        .img-7{
+            grid-column: span 2;
+        }
+    
+
+        .img-14{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .img-15{
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .img-16{
+            grid-column: span 2;
+
+        }
+
+        .img-17{
+            grid-column: span 2;
+        }
+
+        .img-18{
+            grid-column: span 2;
+        }
+
+        .img-19{
+            grid-column: span 2;
+        }
+
+        .img-20{
+            grid-column: span 4;
+            grid-row:  span 1;
+        }
 
         .img:hover{
             filter: grayscale(50%);
             cursor: pointer;
             transition: filter .5s;
         }
+
+
         
-        .img-1{
-            grid-area: img1;
-        }
-        
-        .img-2{
-            grid-area: img2;
-        }
-
-        .img-3{
-            grid-area: img3;
-        }
-
-        .img-4{
-            grid-area: img4;
-        }
-
-        .img-5{
-            grid-area: img5;
-        }
-
-        .img-6{
-            grid-area: img6;
-        }
-
-        .img-7{
-            grid-area: img7;
-        }
-
-        .img-8{
-            grid-area: img8;
-        }
-
-        .img-9{
-            grid-area: img9;
-        }
-
-        .img-10{
-            grid-area: img10;
-        }
-
-        .img-11{
-            grid-area: img11;
-        }
-        
-        .img-12{
-            grid-area: img12;
-        }
-
-        .img-13{
-            grid-area: img13;
-        }
-
-        .img-14{
-            grid-area: img14;
-        }
-
-        .img-15{
-            grid-area: img15;
-        }
-
-        .img-16{
-            grid-area: img16;
-        }
-
-        .img-17{
-            grid-area: img17;
-        }
-
-        .img-18{
-            grid-area: img18;
-        }
-
-        .img-19{
-            grid-area: img19;
-        }
-
-        .img-20{
-            grid-area: img20;
-        }
 
     
         .img{
@@ -329,21 +299,21 @@
             cursor: pointer;
         }
 
-    .container-img {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        opacity: 0;
-        pointer-events: none; /* Deshabilita interacciones cuando está oculto */
-        transition: opacity 0.3s ease;
-    }
+        .container-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none; /* Deshabilita interacciones cuando está oculto */
+            transition: opacity 0.3s ease;
+        }
 
     .container-img.move {
         opacity: 1;
@@ -418,22 +388,43 @@
 
     /* Media query para móviles (ajusta según necesites) */
     @media (max-width: 768px) {
-        .container-grid{
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(5, 1fr 0.5fr); 
 
-            grid-template-areas: 
-            "img1 img2"
-            "img3 img4"
-            "img5 img6"
-            "img7 img8"
-            "img9 img10"
-            "img11 img12"
-            "img13 img14"
-            "img15 img16"
-            "img17 img18"
-            "img19 img20";
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: minmax(100px, auto);
+            grid-auto-flow: row;
+            grid-gap: 5px
         }
+
+        .img-1{
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .img-2{
+            grid-column: span 2;
+            grid-row: span 2;
+            object-position: bottom;
+        }
+
+        .img-3{
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .img-4{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .img-5{
+            grid-column: span 2;
+            grid-row: span 4;
+        }
+
+        
+
 
         .main-title{
             font-size: 2.5rem;
