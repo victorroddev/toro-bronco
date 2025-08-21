@@ -40,7 +40,7 @@
             </div>
         </div>
         <!--Menu-->
-        <div id="menu-modal" class="flex flex-col absolute p-6 lg:items-center bg-black z-50 w-full h-dvh pt-12 hidden transition-opacity opacity-0 duration-300"> 
+        <div id="menu-modal" class="flex flex-col absolute p-6 lg:items-center bg-black z-50 w-full h-dvh pt-12 hidden transition-opacity opacity-0 duration-1000"> 
             <ul class="lg:text-center text-2xl lg:text-4xl font-poppins flex flex-col gap-14">
                 <li class="flex flex-row items-center gap-3.5">
                     <!-- Menu Icon -->
@@ -76,10 +76,36 @@
                 </a>
             </div>
         </div>
+        <div id="loader-overlay" class="fixed inset-0 bg-black flex flex-col items-center justify-center z-[9999] opacity-100 pointer-events-auto transition-opacity duration-300 ">
+            <div class="bg-[url(/static/images/loader-1.webp)] bg-cover w-[100%] h-[100%] opacity-10 absolute inset-0"></div>
+            <div class="animate-pulse flex flex-col items-center justify-center">
+                <img src="{{url_for('static', filename='images/logo-toro-bronco.webp')}}" alt="" class="size-28">
+                <h2 class="uppercase text-center text-4xl text-white font-baskervville font-bold mt-5 ">Experiencia y tradición</h2>
+                <h2 class="font-Roustel text-redCustom text-3xl">Maestro Volvo</h2>
+            </div>
+            <div id="ts-particles" class="">
+            </div>
+        </div>
 
-        
+        <script>
+            (async () => {
+                await loadFirePreset(tsParticles); 
+
+                await tsParticles.load({
+                    id: "ts-particles",
+                    options: {
+                    preset: "fire",
+                    background: {
+                             image: "radial-gradient(#00000, #000000)", // Esto hace que el fondo de las partículas sea transparente
+                    }
+                    },
+                });
+                })();
+        </script>
+
         <!--Loader-->
         <!--
+
         <div id="loader-overlay" class="fixed inset-0 bg-black flex items-center justify-center z-[9999] opacity-100 pointer-events-auto transition-opacity duration-300 mx-auto flex flex-col">
             <svg class="flame-loader-svg" width="150" height="150" viewBox="0 0 492.289 492.289" xml:space="preserve" fill="#000000">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
