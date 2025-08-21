@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     loaderOverlay.style.display = 'none';
                     loaderOverlay.style.pointerEvents = 'none';
                 }, 300); // Duración de la transición en CSS
-            }, 1500); // Mínimo 500ms de visualización del loader
+            }, 3500); // Mínimo 500ms de visualización del loader
         }
     });
 
