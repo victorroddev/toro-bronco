@@ -3,50 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidades | Toro Bronco</title>
+    <title>Tacos | Toro Bronco</title>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     {%extends "base.html" %}
 </head>
 <body>
     {%block content %}
-    <h2 class="title">Conoce nuestras</h2>
-    <h2 class="title main-title mb-6">Especialidades</h2>
+    <h2 class="title main-title mb-6">Tacos</h2>
+
+    <p class="text-center text-white font-poppins text-lg mb-6">El papá de los tacos</p>
 
     <!--items-->
-    <div class="container-grid">
-        <img src="{{url_for('static', filename='/images/menu/bimbalete-01.webp')}}" alt="Bimbalete" class="img img-1" description="Bimbalete">
-        <img src="{{url_for('static', filename='/images/menu/bimbalete-02.webp')}}" alt="Bimbalete 2" class="img img-2" description="Bimbalete">
-        <img src="{{url_for('static', filename='/images/menu/chamorro-adobo.webp')}}" alt="" class="img img-3" description="Chamorros en adobo">
-        <img src="{{url_for('static', filename='/images/menu/lamina-rib-eye.webp')}}" alt="" class="img img-4" description="Lamina Rib Eye en piedra volcánica">
-        <img src="{{url_for('static', filename='/images/menu/queso-fundido.webp')}}" alt="Bimbalete 2" class="img img-5" description="Queso Fundido">
+    <div class="flex mx-auto w-full max-w-[1200px]">
+        <div class="container-grid ">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-alambre-01.webp')}}" alt="Rib Eye" class="img img-1" description="Tacos de alambre">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-alambre-02.webp')}}" alt="Rib Eye" class="img img-2" description="Tacos de alambre">  
+        
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-alambre-queso-01.webp')}}" alt="Rib Eye" class="img img-3" description="Tacos de alambre con queso">
+        
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-camaron-01.webp')}}" alt="Rib Eye" class="img img-4" description="Tacos de camaron">
+        
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-pollo-01.webp')}}" alt="Rib Eye" class="img img-5" description="Tacos de pollo">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-puerco-02.webp')}}" alt="Rib Eye" class="img img-6" description="Tacos de puerco">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-puerco-queso-01.webp')}}" alt="Rib Eye" class="img img-7" description="Tacos de puerco con queso">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-sirloin-01.webp')}}" alt="Rib Eye" class="img img-8" description="Tacos de sirloin">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-sirloin-02.webp')}}" alt="Rib Eye" class="img img-8" description="Tacos de sirloin">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-sirloin-03.webp')}}" alt="Rib Eye" class="img img-9" description="Tacos de sirloin">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-sirloin-queso-01.webp')}}" alt="Rib Eye" class="img img-10" description="Tacos de sirloin con queso">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-sirloin-queso-02.webp')}}" alt="Rib Eye" class="img img-11" description="Tacos de sirloin con queso">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/taco-tripitas-01.webp')}}" alt="Rib Eye" class="img img-12" description="Tacos de tripitas">
+
+        <img src="{{url_for('static', filename='/images/menu/tacos/tacos-puerco-01.webp')}}" alt="Rib Eye" class="img img-13" description="Tacos de puerco">
+
+
+
+        
+            
         <div class="container-img">
-            <img src="" alt="" class="img-show">
-            <i class='bx  bx-x'></i>
-            <p class="copy"></p>
+                <img src="" alt="" class="img-show">
+                <i class='bx  bx-x'></i>
+                <p class="copy"></p>
+            </div>
         </div>
+
     </div>
+    
 
-
-    <div class="flex flex-col cursor-pointer">       
+    <div class="flex flex-col ">       
         <div class="mx-auto py-8 w-[95%] max-w-[1200px]">
                     <div class="space-y-4 ">
                         <!--first question-->
                         <div class="border border-yellowCustom rounded-lg overflow-hidden ">
-                            <button class="hover:cursor-pointer w-full text-left p-4 flex justify-between items-center focus:outline-none"
-                                    aria-expanded="false" aria-controls="menu-toggle">
-                                <span class="text-lg font-poppins text-white font-bold">Descubre todas nuestras Especialidades</span>
+                            <button class="w-full cursor-pointer text-left p-4 flex justify-between items-center focus:outline-none"
+                                    aria-expanded="false" aria-controls="menu-tacos/toggle">
+                                <span class="text-lg font-poppins text-white  font-bold">Nuestros tacos</span>
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div id="menu-toggle" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%]">
+                            <div id="menu-tacos/toggle" class="h-0 opacity-0 overflow-hidden transition-[height,opacity] duration-300 ease-in-out w-[95%]">
                                 <ul class="text-white font-poppins ml-3 flex flex-col gap-2">
-                                <li>Bimbalete bronco gigante (res o puerco) 500gr.</li>
-                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
-                                <li>Bimbalete de camarón</li>
-                                <div class="w-full h-[0.5px] bg-yellowCustom"></div>
-                                <li>Carnitas <span class="font-light">(1 kilo, 3/4, 1/4, 1/2)</span></li>
-                                <br>
+                                    <li>Tacos de res <br> <span class="text-sm">(con papa o tuetano)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Tacos de puerco <br> <span class="text-sm">(con papa o tuetano)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>El misterioso jaralillo <br><span class="text-sm">(de res o puerco)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Tacos de alambre<br><span>(con queso)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Tacos de camaron<br> <span class="text-sm">(con queso)</span></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Tacos de tripita<br></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Tacos de carnitas<br></li>
+                                    <div class="w-full h-[0.5px] bg-yellowCustom"></div>
+                                    <li>Tacos de pollo<br></li>
+                                    <br>
                                 </ul>
                             </div>
                         </div>
@@ -63,21 +105,21 @@
 
         .container-grid{
             margin-inline: auto;
-            display: grid;
-            height: 100vh;
             width: 95%;
-            max-width: 1200px;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(4,1fr);
-            grid-template-areas:
-            "img1 img3"
-            "img1 img3"
-            "img2 img3"
-            "img2 img5"
-            "img4 img5"
-            "img4 img5";
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;  
+            grid-template-rows: repeat(3, 300px);
+            grid-template-areas: 
+            "img1 img2"
+            "img3 img4"
+            "img5 img4"
+            ;
             gap: 0.5rem;
-        }
+            }
+            
+
+        
 
         .img:hover{
             filter: grayscale(50%);
@@ -86,9 +128,9 @@
         }
         
         .img-1{
-            grid-area: img1;
+            grid-area: img4;
         }
-
+        
         .img-2{
             grid-area: img2;
         }
@@ -98,13 +140,13 @@
         }
 
         .img-4{
-            grid-area: img4;
+            grid-area: img1;
         }
-        
+
         .img-5{
             grid-area: img5;
         }
-
+    
         .img{
             width: 100%;
             height: 100%;
@@ -171,110 +213,114 @@
             cursor: pointer;
         }
 
-.container-img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    pointer-events: none; /* Deshabilita interacciones cuando está oculto */
-    transition: opacity 0.3s ease;
-}
-
-.container-img.move {
-    opacity: 1;
-    pointer-events: auto; /* Habilita interacciones cuando está visible */
-}
-
-/* Para la imagen mostrada */
-.img-show {
-    max-width: 90vw;
-    max-height: 90vh;
-    object-fit: contain;
-    display: block;
-    transform: scale(0.7); /* Para un efecto de entrada */
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    object-fit: contain;
-}
-
-.img-show.show {
-    transform: scale(1);
-    opacity: 1;
-}
-
-/* Estilos para el texto */
-.copy {
-    position: absolute;
-    bottom: 5%;
-    color: white;
-    font-size: 1.2em;
-    text-align: center;
-    width: 100%;
-}
-
-/* Estilos para el botón de cerrar (bx) */
-.bx {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-/* Estilos para los botones de navegación */
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 3em;
-    cursor: pointer;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    user-select: none; /* Evita que el texto se seleccione al hacer clic rápido */
-    z-index: 1001;
-    display: none; /* Inicialmente ocultos */
-}
-
-.nav-button.prev {
-    left: 20px;
-}
-
-.nav-button.next {
-    right: 20px;
-}
-
-.nav-button:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-/* Media query para móviles (ajusta según necesites) */
-@media (max-width: 768px) {
-    .main-title{
-        font-size: 2.5rem;
+    .container-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none; /* Deshabilita interacciones cuando está oculto */
+        transition: opacity 0.3s ease;
     }
-    
-    .nav-button {
+
+    .container-img.move {
+        opacity: 1;
+        pointer-events: auto; /* Habilita interacciones cuando está visible */
+    }
+
+    /* Para la imagen mostrada */
+    .img-show {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        display: block;
+        transform: scale(0.7); /* Para un efecto de entrada */
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        object-fit: contain;
+    }
+
+    .img-show.show {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    /* Estilos para el texto */
+    .copy {
+        position: absolute;
+        bottom: 5%;
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Estilos para el botón de cerrar (bx) */
+    .bx {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
         font-size: 2em;
-        padding: 5px;
+        cursor: pointer;
+        z-index: 1001;
     }
-    .prev {
-        left: 10px;
+
+    /* Estilos para los botones de navegación */
+    .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 3em;
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        user-select: none; /* Evita que el texto se seleccione al hacer clic rápido */
+        z-index: 1001;
+        display: none; /* Inicialmente ocultos */
     }
-    .next {
-        right: 10px;
+
+    .nav-button.prev {
+        left: 20px;
     }
-}
+
+    .nav-button.next {
+        right: 20px;
+    }
+
+    .nav-button:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Media query para móviles (ajusta según necesites) */
+    @media (max-width: 768px) {
+        .container-grid{
+            grid-template-rows: repeat(3, 100px);
+        }
+
+        .main-title{
+            font-size: 2.5rem;
+        }
+        
+        .nav-button {
+            font-size: 2em;
+            padding: 5px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    }
 
         
     </style>

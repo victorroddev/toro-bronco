@@ -72,6 +72,18 @@ def entradas():
     lang = get_user_language()
     return render_template(f'{lang}/menu/entradas.html')
 
+@app.route('/tacos')
+def tacos():
+    lang = get_user_language()
+    return render_template(f'{lang}/menu/tacos.html')
+
+@app.route('/tests')
+def tests():
+    lang = get_user_language()
+    return render_template(f'{lang}/tests.html')
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=5500)
+
