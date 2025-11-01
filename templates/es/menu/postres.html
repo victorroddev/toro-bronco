@@ -23,7 +23,6 @@
     <img src="{{url_for('static', filename='/images/menu/flan-2.webp')}}" alt="Bimbalete" class="img img-7" description="Flan">
     <img src="{{url_for('static', filename='/images/menu/flan.webp')}}" alt="Bimbalete" class="img img-8" description="Flan">
     <img src="{{url_for('static', filename='/images/menu/fresas-tequila.webp')}}" alt="Bimbalete" class="img img-9" description="Fresas al tequila">
-    <img src="{{url_for('static', filename='/images/menu/mango-tequila.webp')}}" alt="Bimbalete" class="img img-10" description="Mangos al tequila">
     <img src="{{url_for('static', filename='/images/menu/pastel-3-leches.webp')}}" alt="Bimbalete" class="img img-11" description="Pastel de 3 leches">
     <img src="{{url_for('static', filename='/images/menu/pastel-chocolate.webp')}}" alt="Bimbalete" class="img img-12" description="Pastel de Chocolate">
     <img src="{{url_for('static', filename='/images/menu/tiramisu.webp')}}" alt="Bimbalete" class="img img-13" description="Tiramisú">
@@ -124,6 +123,8 @@
             grid-row: span 2 / span 2;
             grid-column-start: 1;
             grid-row-start: 6;
+            object-fit: cover;
+            object-position: 50% 75%;
         }
 
         .img-4 {
@@ -151,7 +152,7 @@
         }
 
         .img-8 {
-            grid-row: span 2 / span 2;
+            grid-row: span 2 / span 3;
             grid-column-start: 2;
             grid-row-start: 1;
         }
@@ -162,22 +163,16 @@
             grid-row-start: 3;
         }
 
-        .img-10 {
-            grid-row: span 5 / span 5;
+        .img-11 {
+            grid-row: span 3 / span 5;
             grid-column-start: 2;
             grid-row-start: 9;
         }
 
-        .img-11 {
-            grid-row: span 3 / span 3;
+        .img-12 {
+            grid-row: span 2 / span 5;
             grid-column-start: 2;
             grid-row-start: 14;
-        }
-
-        .img-12 {
-            grid-row: span 2 / span 2;
-            grid-column-start: 2;
-            grid-row-start: 17;
         }
 
         .img-13 {
