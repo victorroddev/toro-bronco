@@ -13,9 +13,8 @@
 
 
     <!--items-->
-    <div class="flex mx-auto w-full max-w-[1200px]">
-        <div class="gallery overflow-hidden">
-
+    <div class="container-grid">
+        
         <img src="{{url_for('static', filename='/images/menu/entradas/champinones-ajillo-01.webp')}}" alt="Champiñones al ajillo" class="img img-1" description="Champiñones al ajillo">
 
         <img src="{{url_for('static', filename='/images/menu/entradas/champinones-ajillo-02.webp')}}" alt="Champiñones al ajillo" class="img img-2" description="Champiñones al ajillo">  
@@ -61,7 +60,6 @@
                 <i class='bx  bx-x'></i>
                 <p class="copy"></p>
             </div>
-        </div>
 
     </div>
     
@@ -147,85 +145,98 @@
             color: white;
         }
 
-        .gallery{
+        .container-grid{
+            margin-inline: auto;
+            width: 95%;
+            max-width: 1200px;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: minmax(100px, auto);
-            grid-auto-flow: row;
-            grid-gap: 5px
-        }
-
-        .img-1{
-            grid-column: span 2;
-            grid-row: span 2;
-
-        }
-
-        .img-2{
-            grid-column: span 1;
-        }
-
-        .img-3{
-            grid-column: span 1;
-            grid-row: span 2;
-        }
-
-        .img-5{
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-
-        .img-4{
-            grid-column: span 1;
-        }
-
-        .img-6{
-            grid-column: span 2;
-            grid-row: span 3;
-        }
-        
-        .img-7{
-            grid-column: span 2;
-        }
-    
-
-        .img-14{
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .img-15{
-            grid-column: span 2;
-            grid-row: span 1;
-        }
-
-        .img-16{
-            grid-column: span 2;
-
-        }
-
-        .img-17{
-            grid-column: span 2;
-        }
-
-        .img-18{
-            grid-column: span 2;
-        }
-
-        .img-19{
-            grid-column: span 2;
-        }
-
-        .img-20{
-            grid-column: span 4;
-            grid-row:  span 1;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(12, 100px);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            gap: 0.5rem;
         }
 
         .img:hover{
             filter: grayscale(50%);
             cursor: pointer;
             transition: filter .5s;
+        }
+
+        .img-1{
+            grid-row:  span 1 / span 4;
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-column: span 2;
+        }
+
+        .img-2{
+            grid-row: span 2 / span 3;
+        }
+
+        .img-3{
+            grid-column: span 1;
+            grid-row-start: 4;
+            grid-row: span 3 ;
+        }
+
+        .img-4{
+            grid-column: span 1;
+            grid-row-start: 7;
+            grid-row: span 3;
+        }
+
+        .img-5{
+            grid-column: span 1;
+            grid-row: span 3;
+        }
+
+        .img-6{
+            grid-column: span 1;
+            grid-row: span 4;
+            object-position: 50% 70%;            
+        }
+        
+        .img-7{
+            grid-column: span 1;
+            grid-row: span 3;
+        }
+    
+
+        .img-14{
+            grid-column: span 1;
+            grid-row: span 3;
+        }
+
+        .img-15{
+            grid-column: span 1;
+            grid-row: span 3;
+        }
+
+        .img-16{
+            grid-column: span 1;
+            grid-row: span 3;
+
+        }
+
+        .img-17{
+            grid-column: span 1;
+            grid-row: span 3;
+        }
+
+        .img-18{
+            grid-column: span 1;
+            grid-row: span 3;
+        }
+
+        .img-19{
+            grid-column: span 1;
+            grid-row: span 3;
+        }
+
+        .img-20{
+            grid-column: span 2;
+            grid-row: span 3;
         }
 
         .img{
