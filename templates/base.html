@@ -19,8 +19,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-fire@3/tsparticles.preset.fire.bundle.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css">
+    <link rel="shorcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
 
     <title>{% block title %}Toro Bronco Real{% endblock %}</title>
+    <meta name="description"
+    content="El Toro Bronco Real es el restaurante de cortes, parrilladas y tacos por excelencia en la frontera, sabor y tradicion se unen para brindar el mejor sabor."
+    >
 </head>
 <body class="bg-black">
     {% block navbar %}
